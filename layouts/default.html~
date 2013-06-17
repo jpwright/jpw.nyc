@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @item[:title] %></title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>"> 
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="logo">
+      	<div id="jchar"><%= link_to('J', '/') %></div>
+      </div>
+      <div id="nav">
+	      <ul>
+		<li><a href="/about">About</a></li>
+		<li><a href="/projects">Projects</a></li>
+		<li><a href="/writing">Writing</a></li>
+	      </ul>
+      </div>
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
+    
+  </body>
+</html>

@@ -1,0 +1,102 @@
+--- 
+title: About
+---
+
+<!-- These assets are only used on this page -->
+<style type="text/css">
+.about-entry {
+	clear: both;
+	margin-bottom: 10px;
+}
+
+.about-image {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.about-text {
+	width: 590px;
+	padding-left: 10px;
+	display: inline-block;
+}
+
+#main .about-text p {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.about-location {
+	font-size: 0.8em;
+	letter-spacing: 2px;
+	color: #999;
+	margin-left: 5px;
+}
+
+</style>
+
+<h1>About</h1>
+
+<p>
+	<h2>The basics</h2>
+<p>
+
+<div class="about-entry">
+	<img src="/images/intel.png" class="about-image" />
+	<div class="about-text">
+<p>
+<strong>Intel</strong> <span class="about-location">(Santa Clara, CA)</span><br />
+Rotation Engineering Program
+</p>
+</div>
+</div>
+<hr />
+
+<div class="about-entry">
+	<img src="/images/cornell.png" class="about-image" />
+	<div class="about-text">
+<p>
+<strong>Cornell University</strong> <span class="about-location">(Ithaca, NY)</span><br />
+M.Eng, Electrical &#038; Computer Engineering, &#8217;13<br />
+B.S., Electrical &#038; Computer Engineering, &#8217;12
+</p>
+<p>
+Research assistant, <a href="http://molnargroup.ece.cornell.edu/">Molnar group</a><br />
+Teaching assistant, <a href="http://people.ece.cornell.edu/land/courses/ece4760/">ECE 4760: Designing with Microcontrollers</a><br />
+Teaching assistant, ECE 3400: Electrical &#038; Computer Engineering Practicum<br />
+Course consultant, <a href="http://www.cs.cornell.edu/courses/cs1114/2011sp/">CS 1114: Introduction to Computing using Matlab and Robotics</a>.</p>
+</div>
+</div>
+<hr />
+
+<div class="about-entry">
+<img src="/images/hackny.png" class="about-image" />
+<div class="about-text">
+<p>
+<strong>hackNY</strong> <span class="about-location">(New York, NY)</span><br />
+<a href="http://hackny.org">Fellows</a>, class of &#8217;12<br />
+Resident hardware hacker, spring &#8217;13
+</p>
+</div>
+</div>
+<hr />
+<div class="about-entry">
+<img src="/images/nxj.png" class="about-image" />
+<div class="about-text">
+<p>
+<strong>Next Jump</strong> <span class="about-location">(New York, NY)</span><br />
+Product development intern, summer &#8217;12
+</p>
+</div>
+</div>
+
+</p>
+
+<h2>In more detail</h3>
+<p></p>
+
+<h2>Contact me</h2>
+<p></p>
+
+<h2>About this site</h2>
+<p>I host a private server using <a href="http://asmallorange.com">A Small Orange</a>. This website is generated using <a href="http://nanoc.ws">nanoc</a>, and is available on <a href="http://github.com/jpwright">github</a>.</p>
+</p>
