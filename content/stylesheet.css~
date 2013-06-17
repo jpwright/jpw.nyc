@@ -121,7 +121,7 @@ a:hover {
 
 #jchar a {
   color: #e6ebef;
-  padding: 10px;
+  padding: 13px;
 }
 
 #nav {
