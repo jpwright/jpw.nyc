@@ -2,7 +2,7 @@
 title: About
 ---
 
-<!-- These assets are only used on this page -->
+<!-- These styles are only used on this page -->
 <style type="text/css">
 .about-entry {
 	clear: both;
@@ -105,15 +105,18 @@ I stayed at Cornell for my Master's degree in electrical and computer engineerin
 </p>
 
 <p>
-I spent my summers working at various technology-related internships, but none stood out as much as my summer with <a href="http://hackny.org">hackNY</a>, a non-profit organization that pairs technical students with startups in NYC. Beyond an awesome internship with <a href="http://nextjump.com">Next Jump</a>, I had an amazing class of fellows from across the U.S. and Canada and had the privilege of meeting some really inspirational people from the NY tech scene.
+I spent my summers working at various technology-related internships, but none stood out as much as my summer with <a href="http://hackny.org">hackNY</a>, a non-profit organization that pairs technical students with startups in NYC. Beyond an awesome internship with <a href="http://nextjump.com">Next Jump</a> and a dorm at NYU, I had an amazing class of fellows from across the U.S. and Canada and had the privilege of meeting some really inspirational people from the NY tech scene.
 </p>
 
 <p>
-
+This year I'm moving to Santa Cruz, CA to begin life in the real world, not knowing quite what to expect but optimistic about the future. I'm guided by a desire to change the world: by improving people's lives, by fixing something that's broken, by contributing to humanity's understanding of the natural universe.
+</p>
 
 <h2>Contact me</h2>
-<p></p>
+<p>
+jpwright0 AT gmail DOT com
+</p>
 
 <h2>About this site</h2>
-<p>I host a private server using <a href="http://asmallorange.com">A Small Orange</a>. This website is generated using <a href="http://nanoc.ws">nanoc</a>, and is available on <a href="http://github.com/jpwright">github</a>.</p>
+<p>I host a private server using <a href="http://asmallorange.com">A Small Orange</a>. This website is generated using <a href="http://nanoc.ws">nanoc</a>, and is available on <a href="http://github.com/jpwright/jpwright.net">github</a>.</p>
 </p>

@@ -144,3 +144,10 @@ hr {
 	margin:0 0 1.42em;
 	border:none;
 }
+
+.metadata {
+	font-size: 0.8em;
+	letter-spacing: 2px;
+	color: #999;
+	margin-left: 5px;
+}
