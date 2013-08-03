@@ -1,0 +1,12 @@
+<% render 'default' do %>
+  <div class='post'>
+    <h1><%= item[:title] %></h1>
+    <p>
+	<span class="metadata">Published: <%= item[:published] %></span><br />
+	<span class="metadata"><%= item[:updated] %></span>
+    </p>
+    <article>
+      <%= yield %>
+    </article>
+  </div>
+<% end %>

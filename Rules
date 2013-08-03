@@ -17,6 +17,16 @@ compile '/stylesheet/' do
   # don’t filter or layout
 end
 
+compile '/writing/' do
+  filter :erb
+  layout 'default'
+end
+
+compile '/writing/*' do
+  filter :erb
+  layout 'article'
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items

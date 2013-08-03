@@ -151,3 +151,11 @@ hr {
 	color: #999;
 	margin-left: 5px;
 }
+
+.code {
+	font-family: courier;
+}
+
+.gist {
+	font-size: 0.75em;
+}	

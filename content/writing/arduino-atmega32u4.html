@@ -1,0 +1,18 @@
+--- 
+title: How to run Arduino on the Adafruit atmega32u4 breakout board
+published: August 3, 2012
+updated: Updated&colon; June 18, 2013
+kind: article
+---
+
+<p>I picked up a few of the <a href="http://adafruit.com">Adafruit</a> <a href="http://www.adafruit.com/products/296">Atmega32u4 breakout boards</a> for a <a href="http://jpwright.net/hhw-prereqs">workshop</a> earlier this summer. These are great, inexpensive little devices, but they're only intended for AVR development in C, not Arduino. Adafruit used to support running Teensyduino on these, but they don't anymore, and my attempts to run Teensy on them were really buggy &mdash; using the Arduino serial library would cause them to crash, for example.</p>
+<p>It turns out that using the Leonardo bootloader is much more reliable. Here's how to get that set up:</p>
+<ol>
+<li><strong>Set up an external programmer.</strong> You can't flash the bootloader on the breakout board over USB. You'll need a separate ISP, or you can set up another Arduino as an ISP if you want (follow <a href="http://arduino.cc/en/Tutorial/ArduinoISP">this tutorial</a>)</li>
+<li><strong>Flash the bootloader.</strong> In the Arduino IDE, go to Tools > Programmer, and select the appropriate device. Go to Tools > Board and select Arduino Leonardo. Then click Tools > Burn Bootloader.</li>
+<li><strong>Update references.</strong> Changing the bootloader means your pin references in software won't line up properly with your hardware. Compare the schematics (<a href="https://raw.github.com/adafruit/Atmega32u4-Breakout-Board/b705cabfca804d03f9dc3a367eb8efb55841b6d8/atmega32u4bbsch.png">breakout board</a> vs <a href="http://arduino.cc/en/uploads/Main/arduino-leonardo-schematic_3b.pdf">Leonardo</a>), and address the pins as you would on a Leonardo, but connect them according to the atmega32u4 breakout board schematic. Since the breakout board has fewer pins than the Leonardo, naturally you can't use the same range as the Leonardo documentation would tell you.</li>
+</ol>
+<p>Here's a pinout diagram for the breakout board running the Leonardo bootloader. Thanks to Nikhil Lal.<br />
+<img src="/images/writing/arduino-atmega32u4/schematic.png" />
+</p>
+<p>If you really, really want to run Teensyduino, you can still find <a href="http://www.ladyada.net/wiki/products/atmega32u4breakout/index.html?rev=1302835337">Adafruit's documentation</a> on how to set it up, and <a href="http://forums.adafruit.com/viewtopic.php?f=47?t=29937">this forum thread</a> might help fix problems. Again, they <a href="http://forums.adafruit.com/viewtopic.php?f=24?t=29214">don't recommend doing that</a>, and I ran into a lot of trouble when using standard Arduino libraries.</p>

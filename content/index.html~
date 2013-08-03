@@ -5,10 +5,3 @@ title: jpwright.net | the personal website of Jason Wright
 <h1>Jason Wright</h1>
 
 <p>I'm an electrical and computer engineer who's into designing, building, and hacking stuff. I'm interested in optics (in particular, cameras, computational photography, and the human visual system), discrete mathematics, quantum computing, transportation networks, cartography, modern art, politics, music, the New York Jets, and a continuously expanding set of other topics.</p>
-
-<ul>
-  <li><p><strong>Change this page’s content</strong> by editing the “index.html” file in the “content” directory. This is the actual page content, and therefore doesn’t include the header, sidebar or style information (those are part of the layout).</p></li>
-  <li><p><strong>Change the layout</strong>, which is the “default.html” file in the “layouts” directory, and create something unique (and hopefully less bland).</p></li>
-</ul>
-
-<p>If you need any help with customizing your nanoc web site, be sure to check out the documentation (see sidebar), and be sure to subscribe to the discussion group (also see sidebar). Enjoy!</p>

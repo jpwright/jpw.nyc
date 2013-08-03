@@ -1,5 +1,5 @@
 --- 
-title: jpwright.net | light field camera
+title: light field camera
 ---
 
 <h1>Light field camera</h1>
@@ -9,5 +9,22 @@ title: jpwright.net | light field camera
 </p>
 
 <p>
-Pblsdf
+<img src="/images/projects/asp-lfc-header.png" />
 </p>
+
+<p>
+As part of my M.Eng degree at Cornell, I designed and built a prototype of a <a href="http://en.wikipedia.org/wiki/Light-field_camera">light field camera</a>, a device which captures information about incident rays of light like a traditional camera (their position, wavelength, aggregate intensity) but also can record their direction. This allows for some interesting capabilities (refocusing images after they’ve already been taken, passive 3D range mapping, to name a few). Unlike existing technology, which uses microlens arrays (expensive and somewhat difficult to manufacture), using <a href="http://en.wikipedia.org/wiki/Angle-sensitive_pixel">angle-sensitive pixels</a> allows light field capture using a single lens and CMOS-compatible manufacturing techniques.
+</p>
+
+<p>
+Using a custom hardware design with an ATXmega128A1 microcontroller as its core, data from the rolling-shutter imager is read and processed into a format that can work with a number of unique image processing algorithms, including computational refocus and passive 3D range 
+mapping. The device includes dual 80 MSPS ADCs, 64 MB of SDRAM, an FTDI USB-to-Serial converter and micro-USB connector, an SD card slot, a TFT LCD touchscreen, and an integrated charge controller for a 2000 mAh polymer lithium ion battery.
+</p>
+
+<p>
+<a href="/documents/asp-lfc-report.pdf">View full report</a><br />
+<a href="/documents/asp-lfc-poster.pdf">View poster</a><br />
+<a href="http://github.com/jpwright/asp-lfc/">View schematics and code on Github</a>
+</p>
+
+

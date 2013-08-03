@@ -1,0 +1,21 @@
+--- 
+title: writing
+---
+
+<h1>Writing</h1>
+
+<p class="article-links">
+<h2>Technical</h2>
+<a href="./arduino-atmega32u4">How to run Arduino on the Adafruit atmega32u4 breakout board</a> <span class="metadata">(June 18, 2013)</span><br />
+<a href="./nmeap-8bit">Using NMEAP on an 8-bit ATmega</a> <span class="metadata">(May 1, 2012)</span></a>
+</p>
+
+<p class="article-links">
+<h2>Academic</h2>
+<a href="../documents/qip-project.pdf">Review of Shadbolt et al 2012</a>, a very dense report on photonic quantum circuits for <a href="http://courses.cornell.edu/preview_course_nopop.php?catoid=14&coid=164433">a class on quantum information processing</a> <span class="metadata">(December 16, 2012)</span><br />
+<a href="../documents/cuba-sp11.pdf">Future Trends in Asian Trade Liberalization</a>, editorial for <a href="http://www.scribd.com/doc/82234863/Business-Asia-5th-Issue-Asia-s-Riddled-Ascent">Cornell Business Asia</a> <span class="metadata">(March 8, 2011)</span><br />
+</p>
+
+<p class="article-links">
+<h2>Musings</h2>
+</p>

@@ -11,7 +11,7 @@ Jason
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>A New Item</title>
+    <title>jpwright.net | fpga nes</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/style.css">
 
@@ -32,7 +32,35 @@ Jason
       </div>
     </div>
     <div id="main">
-      Hi, I'm a new item!
+      <h1>FPGA NES player</h1>
+
+<p>
+<span class="metadata">March 2013 &mdash; May 2013</span>
+</p>
+
+<p>
+<img src="/images/projects/fpga-nes-header.png" />
+</p>
+
+<p>
+As a final project for <a href="http://people.ece.cornell.edu/land/courses/ece5760/">ECE 5760</a>, a graduate course in embedded systems that focuses on field-programmable gate arrays (FPGAs), I helped build a system to automatically play the classic NES game Super Mario Brothers.
+</p>
+<p>
+Unlike most other AI systems for playing video games, our system is entirely implemented in hardware -- there is no CPU involved at any point. Instead, the system analyzes the output video from the NES, and with the help of the NTSC decoder modules from Terasic, tracks the location of pipes, obstacles, and enemies on the screen. That information is then used to make decisions for Mario about when to jump and for how long. The system, which uses a Cyclone II FPGA from Altera as its core, emulates the signals of an NES controller connected in the Player 1 slot of the NES.
+</p>
+<p>
+Despite some issues working with 30-year-old hardware, we were able to create a system that could successfully complete World 1-1. (Because our system depends on analyzing the video directly, we spent more time fine-tuning the AI than working on analyzing the completely-different-looking World 1-2 and beyond.)
+</p>
+
+<p>
+<p>My team members for this project were good friends <a href="http://simamitra.com">Sima Mitra</a> and <a href="http://jeremyblum.com">Jeremy Blum</a>.
+
+<p>
+<a href="http://www.nintendoninja.com">View project report</a><br />
+<a href="https://github.com/jpwright/fpganes">View schematics and code on Github</a><br />
+<a href="http://www.youtube.com/watch?v=mVKlyUY9M6Y">View demonstration video on YouTube</a>
+
+</p>
     </div>
     
   </body>

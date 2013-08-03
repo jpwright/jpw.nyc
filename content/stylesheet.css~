@@ -144,3 +144,22 @@ hr {
 	margin:0 0 1.42em;
 	border:none;
 }
+
+#main p.article-links {
+	line-height: 400%;
+}
+
+.metadata {
+	font-size: 0.8em;
+	letter-spacing: 2px;
+	color: #999;
+	margin-left: 5px;
+}
+
+.code {
+	font-family: courier;
+}
+
+.gist {
+	font-size: 0.75em;
+}	
