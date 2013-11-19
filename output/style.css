@@ -23,7 +23,7 @@ a:hover {
 }
 
 #main {
-  margin-left: 280px;
+  margin-left: 10%;
   margin-top: 20px;
   width: 650px;
 }
@@ -71,7 +71,7 @@ a:hover {
 #sidebar {
 
   margin-top: 40px;
-  margin-left: 280px;
+  margin-left: 10%;
   min-height: 50px;
   width: 650px;
 }
@@ -103,7 +103,7 @@ a:hover {
 
 #logo {
   position: absolute;
-  left: 280px;
+  left: 10%;
   width: 50px;
   height: 50px;
   text-align: center;

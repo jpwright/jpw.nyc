@@ -23,7 +23,7 @@ a:hover {
 }
 
 #main {
-  margin-left: 280px;
+  margin-left: 10%;
   margin-top: 20px;
   width: 650px;
 }
@@ -71,7 +71,7 @@ a:hover {
 #sidebar {
 
   margin-top: 40px;
-  margin-left: 280px;
+  margin-left: 10%;
   min-height: 50px;
   width: 650px;
 }
@@ -143,10 +143,6 @@ hr {
 	height:1px;
 	margin:0 0 1.42em;
 	border:none;
-}
-
-#main p.article-links {
-	line-height: 400%;
 }
 
 .metadata {
