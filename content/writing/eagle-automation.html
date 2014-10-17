@@ -1,0 +1,16 @@
+--- 
+title: Automatic part creation from datasheets in Eagle
+published: February 16, 2014
+updated: 
+kind: article
+---
+
+<p>Creating Eagle parts for devices with many pins can be quite time consuming. To automate some work I was doing with the <a href="http://www.xilinx.com/support/documentation/user_guides/ug385.pdf">Xilinx Spartan-6 family</a>, I created two scripts to generate Eagle parts for each device.</p>
+
+<p>These scripts take as their input a text file containing a list of pin names and their appropriate pads. (As written, they are designed to accept text directly copied from the Xilinx datasheets, although they could be easily modified to suit other formats). Instead of directly generating the part, they produce a large output script that can be fed directly into <a href="http://web.mit.edu/~xavid/arch/i386_rhel4/help/24.htm">Eagle's command line interface</a>.</p>
+
+<p>First, <a href="https://github.com/jpwright/eagle-scripts/blob/master/pinCreator.py">pinCreator.py</a> creates all the necessary pin objects (in symbol view), naming them appropriately, and assigning the proper pin type where appropriate (I/O, Pwr, or NC). It will correct duplicate pins by naming them according to the <a href="http://dangerousprototypes.com/2012/05/30/how-to-create-eagle-parts-with-pins-that-have-the-same-name/">Eagle convention of PIN@0, PIN@1, etc</a>.</p>
+
+<p>Second, <a href="https://github.com/jpwright/eagle-scripts/blob/master/pinConnector.py">pinConnector.py</a> will connect the pins to their appropriate pads (in device view). You'll need to have the package already available in the library, with the pad naming convention matching that of your datasheet. For virtually all common IC packages this is not a problem. This handles duplicate pin names using the same method as pinCreator.py.
+
+<p><a href="https://github.com/jpwright/eagle-scripts">See my entire library of Eagle scripts on GitHub.</a></p>

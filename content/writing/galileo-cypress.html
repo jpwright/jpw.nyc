@@ -1,0 +1,50 @@
+--- 
+title: Intel Galileo&colon; How to control the I/O expander via command line
+published: October 17, 2014
+kind: article
+---
+
+<p><em>Note: This tutorial is for the Galileo Gen 1 only.</em></p>
+<p>You may be aware that the Galileo uses an I/O expander chip to add additional pins 
+onto the Quark X1000. This chip, the Cypress CY8C9540A, effectively multiplexes the 
+majority of the Galileo's GPIO pins and acts as a PWM controller. For the most part, its 
+behavior is completely transparent -- but there are certain situations where it may be 
+helpful to directly control it.</p>
+<p>To control the CY8C9540A from the command line, we'll use the Linux utilities 
+<span class="code">i2cget</span> and <span class="code">i2cset</span>. You'll need the 
+<a href="https://software.intel.com/en-us/iot/downloads">Intel IoT Dev Kit</a> image 
+to use these, although you can also compile your own Yocto build as necessary.</p>
+<p>The CY8C9540A will have an address of either 0x20 or 0x21, depending on the 
+position of jumper J2. When the jumper is over the pin with the white triangle next 
+to it, the address should be 0x20. You can also check this by running the command 
+<span class="code">ls /sys/bus/i2c/devices</span>, where either <span class="code">
+0-0020</span> or <span class="code">0-0021</span> should appear.</p>
+<p>The first thing we need to do is disable the image's kernel module for 
+controlling the expander -- this can be done by running the command <span class="code">
+rmmod cy8c9540a</span>. If not, the device will constantly appear as "busy", because 
+the Galileo will constantly spam it with commands so that it matches the state of 
+everything in sysfs.</p>
+<p>The part's <a href="http://www.cypress.com/?docID=31413">datasheet</a> will be 
+needed to figure out the I2C interface. The easiest thing to do right away is to 
+check the Device ID/Status Register located at 0x2E. Use the following command:</p>
+<p><span class="code">i2cget 0 0x20 0x2e b</span></p>
+<p>The "0" refers to the desired I2C bus -- there's only on the Galileo, so it gets 
+the number zero. "0x20" refers to the device address. "0x2e" refers to the desired 
+register to be read. And "b" indicates that one byte should be read at a time. 
+You may find it convenient to add the -y flag to avoid being prompted every time 
+with the warning message about messing around on the I2C bus.</p>
+<p>This command should return 0x40 if everything is working properly. The first 
+nibble is the device family (4) and the second nibble is 0 or 1, depending on 
+whether factory settings or user settings are applied. By default, the Galileo 
+applies its own user settings.</p>
+<p>The following command resets the chip to factory defaults (don't worry -- the 
+Galileo restores its custom settings on boot):</p>
+<p><span class="code">i2cset 0 0x20 0x30 0x02 b</span></p>
+<p>This writes the value 0x02 to the command register at 0x30. There are many other 
+useful applications of this technique, including changing the drive mode, pullup 
+settings, and PWM frequency/duty cycle. Many of these settings are not directly 
+exposed through sysfs, such as open drain and open source drive modes.</p>
+<p>To reload the normal kernel module, just run:</p>
+<p><span class="code">modprobe cy8c9540a</span></p>
+<p>You can check that it's working using <span class="code">lsmod</span>, where an 
+ entry for cy8c9540a should appear.</p>

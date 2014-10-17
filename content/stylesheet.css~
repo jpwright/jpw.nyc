@@ -103,7 +103,7 @@ a:hover {
 
 #logo {
   position: absolute;
-  left: 280px;
+  left: 10%;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -132,6 +132,11 @@ a:hover {
   margin-top: 0.75em;
   height: 50px;
   width: 600px;
+}
+
+#snail {
+  margin-top: 1500px;
+  text-align: right;
 }
 
 hr {

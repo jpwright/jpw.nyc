@@ -1,8 +1,8 @@
-Crashlog created at Tue Jun 18 01:14:09 -0400 2013
+Crashlog created at 2014-10-17 15:02:16 -0700
 
 ===== MESSAGE:
 
-RuntimeError: Could not parse YAML for content/writing/arduino-atmega32u4.html: syntax error on line 3, col 17: `updated: Updated: June 18, 2013'
+RuntimeError: Could not parse YAML for content/writing/galileo-cypress.html: (<unknown>): mapping values are not allowed in this context at line 2 column 21
 
 ===== COMPILATION STACK:
 
@@ -10,127 +10,103 @@ RuntimeError: Could not parse YAML for content/writing/arduino-atmega32u4.html: 
 
 ===== STACK TRACE:
 
-  0. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/data_sources/filesystem.rb:266:in `parse'
-  1. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/data_sources/filesystem.rb:89:in `load_objects'
-  2. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/base/source_data/code_snippet.rb:36:in `map'
-  3. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/data_sources/filesystem.rb:78:in `each'
-  4. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/data_sources/filesystem.rb:78:in `map'
-  5. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/data_sources/filesystem.rb:78:in `load_objects'
-  6. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/data_sources/filesystem.rb:37:in `items'
-  7. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:325:in `load_items'
-  8. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:324:in `each'
-  9. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:324:in `load_items'
-  10. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:243:in `load'
-  11. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:127:in `layouts'
-  12. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:187:in `__nonmemoized_dependency_tracker'
-  13. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/base/memoization.rb:56:in `send'
-  14. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/base/memoization.rb:56:in `dependency_tracker'
-  15. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:456:in `stores'
-  16. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/base/compilation/compiler.rb:146:in `unload'
-  17. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:274:in `unload'
-  18. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/base/source_data/site.rb:254:in `load'
-  19. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:63:in `load_site'
-  20. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/cli/commands/compile.rb:358:in `run'
-  21. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:14:in `call'
-  22. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
-  23. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
-  24. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/cli/command_runner.rb:13:in `call'
-  25. /var/lib/gems/1.8/gems/cri-2.3.0/lib/cri/command_dsl.rb:185:in `runner'
-  26. /var/lib/gems/1.8/gems/cri-2.3.0/lib/cri/command.rb:296:in `call'
-  27. /var/lib/gems/1.8/gems/cri-2.3.0/lib/cri/command.rb:296:in `run_this'
-  28. /var/lib/gems/1.8/gems/cri-2.3.0/lib/cri/command.rb:249:in `run'
-  29. /var/lib/gems/1.8/gems/cri-2.3.0/lib/cri/command.rb:262:in `run'
-  30. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/cli.rb:52:in `run'
-  31. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
-  32. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
-  33. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib/nanoc/cli.rb:50:in `run'
-  34. /var/lib/gems/1.8/gems/nanoc-3.6.4/bin/nanoc:19
+  0. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/data_sources/filesystem.rb:266:in `rescue in parse'
+  1. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/data_sources/filesystem.rb:263:in `parse'
+  2. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/data_sources/filesystem.rb:89:in `block in load_objects'
+  3. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/data_sources/filesystem.rb:78:in `each'
+  4. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/data_sources/filesystem.rb:78:in `map'
+  5. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/data_sources/filesystem.rb:78:in `load_objects'
+  6. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/data_sources/filesystem.rb:37:in `items'
+  7. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:325:in `block in load_items'
+  8. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:324:in `each'
+  9. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:324:in `load_items'
+  10. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:243:in `load'
+  11. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:127:in `layouts'
+  12. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/compilation/compiler.rb:187:in `dependency_tracker'
+  13. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/memoization.rb:56:in `block in memoize'
+  14. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/compilation/compiler.rb:457:in `stores'
+  15. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/compilation/compiler.rb:146:in `unload'
+  16. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:274:in `unload'
+  17. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:254:in `rescue in load'
+  18. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:258:in `load'
+  19. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/command_runner.rb:63:in `load_site'
+  20. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/commands/compile.rb:390:in `run'
+  21. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/command_runner.rb:14:in `block in call'
+  22. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  23. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  24. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/command_runner.rb:13:in `call'
+  25. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib/cri/command_dsl.rb:185:in `block in runner'
+  26. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib/cri/command.rb:298:in `call'
+  27. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib/cri/command.rb:298:in `run_this'
+  28. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib/cri/command.rb:251:in `run'
+  29. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib/cri/command.rb:264:in `run'
+  30. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli.rb:59:in `block in run'
+  31. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  32. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  33. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli.rb:57:in `run'
+  34. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/bin/nanoc:19:in `<top (required)>'
   35. /usr/local/bin/nanoc:23:in `load'
   ... 38 more lines omitted. See full crash log for details.
 
 ===== VERSION INFORMATION:
 
-nanoc 3.6.4 © 2007-2013 Denis Defreyne.
-Running ruby 1.8.7 (2012-02-08) on x86_64-linux with RubyGems 1.8.24.
+nanoc 3.6.7 © 2007-2013 Denis Defreyne.
+Running ruby 1.9.3 (2013-11-22) on x86_64-linux with RubyGems 1.8.23.
 
 ===== SYSTEM INFORMATION:
 
-Linux ubuntu 3.5.0-34-generic #55-Ubuntu SMP Thu Jun 6 20:18:19 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
+Linux FARADAY 3.11.0-15-generic #25-Ubuntu SMP Thu Jan 30 17:22:01 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
 
 ===== INSTALLED GEMS:
 
-  uuidtools 2.1.3, 2.1.4
-  cri 2.3.0
-  af 0.3.18.11, 0.3.18.12
-  rb-readline 0.4.2, 0.5.0
-  rack 1.5.2
-  json_pure 1.6.7, 1.8.0
-  nanoc 3.6.4
-  mime-types 1.19, 1.23
+  adsf 1.2.0
   colored 1.2
-  terminal-table 1.4.5
-  interact 0.4.8, 0.5.2
-  rubyzip 0.9.9
-  rest-client 1.6.7
-  addressable 2.2.8, 2.3.4
-  adsf 1.1.1
+  cri 2.4.1
+  kramdown 1.3.1
+  nanoc 3.6.7
+  rack 1.5.2
+  stringex 2.1.2
 
 ===== ENVIRONMENT:
 
-COLORTERM => "gnome-terminal"
-COMPIZ_BIN_PATH => "/usr/bin/"
-COMPIZ_CONFIG_PROFILE => "ubuntu"
-DBUS_SESSION_BUS_ADDRESS => "unix:abstract=/tmp/dbus-PPqjqViuft,guid=654d7f8405d0f45ef7caafe551bfcaec"
-DEFAULTS_PATH => "/usr/share/gconf/ubuntu.default.path"
-DESKTOP_SESSION => "ubuntu"
-DISPLAY => ":0"
-GDMSESSION => "ubuntu"
-GNOME_DESKTOP_SESSION_ID => "this-is-deprecated"
-GNOME_KEYRING_CONTROL => "/run/user/jason/keyring-2nlYZs"
-GNOME_KEYRING_PID => "1798"
-GPG_AGENT_INFO => "/run/user/jason/keyring-2nlYZs/gpg:0:1"
-GTK_MODULES => "overlay-scrollbar"
+COMP_WORDBREAKS => " \t\n\"'><;|&(:"
+DISPLAY => "localhost:11.0"
 HOME => "/home/jason"
+KIGITHUB => "https://github.com/KiCad"
 LANG => "en_US.UTF-8"
+LD_LIBRARY_PATH => "/usr/local/lib"
 LESSCLOSE => "/usr/bin/lesspipe %s %s"
 LESSOPEN => "| /usr/bin/lesspipe %s"
 LOGNAME => "jason"
 LS_COLORS => "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:"
-MANDATORY_PATH => "/usr/share/gconf/ubuntu.mandatory.path"
-OLDPWD => "/home/jason/Documents"
-PATH => "/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-PWD => "/home/jason/Documents/nanoc/tutorial"
-SESSION_MANAGER => "local/ubuntu:@/tmp/.ICE-unix/1809,unix/ubuntu:/tmp/.ICE-unix/1809"
+MAIL => "/var/mail/jason"
+OLDPWD => "/media/jason/e/projects/jpwright.net/content"
+PATH => "/usr/local/lib/:/media/jason/e/apps/eagle/eagle-6.5.0/bin:/media/jason/e/projects/giffy:/media/jason/e/projects/sh:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+PWD => "/media/jason/e/projects/jpwright.net"
+QT_QPA_PLATFORMTHEME => "appmenu-qt5"
 SHELL => "/bin/bash"
 SHLVL => "1"
-SSH_AGENT_PID => "1844"
-SSH_AUTH_SOCK => "/run/user/jason/keyring-2nlYZs/ssh"
+SSH_CLIENT => "151.226.52.235 61282 22"
+SSH_CONNECTION => "151.226.52.235 61282 10.0.0.9 22"
+SSH_TTY => "/dev/pts/10"
 TERM => "xterm"
-UBUNTU_MENUPROXY => "libappmenu.so"
 USER => "jason"
-WINDOWID => "65018043"
-XAUTHORITY => "/home/jason/.Xauthority"
-XDG_CONFIG_DIRS => "/etc/xdg/xdg-ubuntu:/etc/xdg"
-XDG_CURRENT_DESKTOP => "Unity"
-XDG_DATA_DIRS => "/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/"
-XDG_RUNTIME_DIR => "/run/user/jason"
-XDG_SEAT_PATH => "/org/freedesktop/DisplayManager/Seat0"
-XDG_SESSION_COOKIE => "2155f41c89a2b872bd022dd150edfa65-1371523820.287102-1555606251"
-XDG_SESSION_PATH => "/org/freedesktop/DisplayManager/Session0"
+XDG_RUNTIME_DIR => "/run/user/1000"
+XDG_SESSION_COOKIE => "73bb7844ae55db8f3005e83552ce0206-1413580496.747145-1218846328"
+XDG_SESSION_ID => "8347"
 _ => "/usr/local/bin/nanoc"
 
 ===== LOAD PATHS:
 
-  0. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib
-  1. /var/lib/gems/1.8/gems/colored-1.2/lib
-  2. /var/lib/gems/1.8/gems/cri-2.3.0/lib
-  3. /var/lib/gems/1.8/gems/nanoc-3.6.4/lib
-  4. /usr/local/lib/site_ruby/1.8
-  5. /usr/local/lib/site_ruby/1.8/x86_64-linux
+  0. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib
+  1. /var/lib/gems/1.9.1/gems/colored-1.2/lib
+  2. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib
+  3. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib
+  4. /usr/local/lib/site_ruby/1.9.1
+  5. /usr/local/lib/site_ruby/1.9.1/x86_64-linux
   6. /usr/local/lib/site_ruby
-  7. /usr/lib/ruby/vendor_ruby/1.8
-  8. /usr/lib/ruby/vendor_ruby/1.8/x86_64-linux
+  7. /usr/lib/ruby/vendor_ruby/1.9.1
+  8. /usr/lib/ruby/vendor_ruby/1.9.1/x86_64-linux
   9. /usr/lib/ruby/vendor_ruby
-  10. /usr/lib/ruby/1.8
-  11. /usr/lib/ruby/1.8/x86_64-linux
-  12. .
+  10. /usr/lib/ruby/1.9.1
+  11. /usr/lib/ruby/1.9.1/x86_64-linux

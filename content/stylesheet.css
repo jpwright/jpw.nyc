@@ -25,7 +25,7 @@ a:hover {
 #main {
   margin-left: 10%;
   margin-top: 20px;
-  width: 650px;
+  width: 670px;
 }
 
 #main h1 {
@@ -132,6 +132,11 @@ a:hover {
   margin-top: 0.75em;
   height: 50px;
   width: 600px;
+}
+
+#snail {
+  margin-top: 9500px;
+  text-align: center;
 }
 
 hr {
