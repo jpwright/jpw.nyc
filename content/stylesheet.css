@@ -161,6 +161,12 @@ hr {
 	font-family: courier;
 }
 
+.code-block {
+	font-family: courier;
+	display: block;
+	margin: 10px;
+}
+
 .gist {
 	font-size: 0.75em;
 }	

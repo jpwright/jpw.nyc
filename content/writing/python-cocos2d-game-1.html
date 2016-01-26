@@ -1,0 +1,109 @@
+--- 
+title: Designing a multiplayer game with Python and cocos2d, part 1 -- Getting started
+published: January 28, 2015
+kind: article
+---
+
+<p><em>This is the first of a series of tutorials on game development using Python and cocos2d. I'm writing these as I learn new concepts, with the hope that documenting and sharing my progress will help others.</em></p>
+
+<p>So you want to make a game in Python? There are a number of options out there, but <a href="http://python.cocos2d.org/">cocos2d</a> is one of the most mature frameworks available. It also boasts similar  implementations in C++, C#, Javascript, and Swift, which makes porting games to different platforms easier. Other options to explore include <a href="http://kivy.org/">Kivy</a>, <a href="http://www.pygame.org/">Pygame</a>, <a href="http://www.renpy.org/">Ren'Py</a>, and <a href="http://www.panda3d.org/">Panda3D</a>.</p> 
+
+<p>This tutorial set will guide you from getting started with cocos2d to building a full-fledged multiplayer game. Importantly, the tutorials assume you already have a working knowledge of basic programming concepts and familiarity with the Python environment.</p>
+
+<h4>1. Installation</h4>
+
+<p>To get started, install the cocos2d package by running <span class="code-block">easy_install cocos2d</span> or <span class="code-block">pip install cocos2d --process-dependency-links</span> You can also download cocos2d from <a href="https://pypi.python.org/pypi/cocos2d/">pypi</a> and install from source by running <span class="code-block">setup.py install</span> This will download all docs and code samples as well. More details on installation can be found in the <a href="http://python.cocos2d.org/doc/programming_guide/installation.html">cocos2d installation guide</a>.</p>
+
+<p>You should also download the code associated with this tutorial <a href="https://github.com/jpwright/cocos2d-python-tutorials/archive/master.zip">here</a>, or clone the repository by running <span class="code">git clone https://github.com/jpwright/cocos2d-python-tutorials.git</span>.
+
+<h4>2. First program -- directional movement</h4>
+
+<p>To start, we're going to create an environment where you can control a player using the arrow keys. The output will look something like this:</p>
+
+<p><img src="/images/writing/python-cocos2d/01-02-init.png" alt="Output of main.py" /></p>
+
+<p>The sprites for this part of the tutorial were lovingly borrowed from the amazing game <a href="http://www.ftlgame.com/">Faster Than Light</a>, which I highly recommend you go buy right now.</p>
+
+<p>If you navigate to the "01 Getting Started" directory of the tutorial code and start the game by running <span class="code">python main.py</span>, you should see this window appear. You should be able to move the sprite in any direction using your arrow keys. If not, check that your cocos2d installation completed successfully. If you have other issues, let me know by <a href="https://github.com/jpwright/cocos2d-python-tutorials/issues">filing an issue</a>.</p>
+
+<p>So how does this work?</p>
+
+<p>The first step is <em>importing dependencies</em>. At the top of main.py you'll see the following lines:
+
+<span class="code-block">
+import pyglet<br />
+from pyglet.window import key<br />
+<br />
+import cocos<br />
+from cocos import actions, layer, sprite, scene<br />
+from cocos.director import director
+</span>
+</p>
+
+<p>Next, we'll initialize the <span class="code">director</span> and create a <span class="code">scene</span>. The director object initializes the game's main window and allows you to transition between different scenes. The scene is any part of the game's flow. For example, you might have separate scenes for different levels/cutscenes/menus of your game. In this example, we'll only use one scene.</p>
+
+<p>To initialize the director: <span class="code-block">director.init(width=500, height=300, do_not_scale=True, resizable=True)</span>
+The arguments allow you to adjust the initial width and height of the game's window. <span class="code">do_not_scale</span>, when set to its default value of False, results in the game scaling up all coordinates and graphics when the window is resized. If you want your game to support different screen resolutions, <span class="code">do_not_scale</span> will need to be set to True.</p>
+
+<p>Next, we'll create a layer and add a sprite to it:
+<span class="code-block">
+player_layer = layer.Layer()<br />
+me = sprite.Sprite('human-female.png')<br />
+player_layer.add(me)
+</span>
+Having multiple layers makes it easier to separate different elements of the game. For example, menus and dialogs will typically need to be on the highest layer, while maps and backgrounds need to be on the lowest layer.</p>
+<p>When initializing a Sprite object, you must include a path to its default image. This image is a property of the Sprite which can be altered later.</p>
+
+<p>In order to control the movement of the sprite, we'll use the <a href="http://python.cocos2d.org/doc/api/cocos.actions.move_actions.html">actions.Move</a> module. This class allows you to set any of an object's position, velocity, acceleration, gravity, rotation, angular velocity, and angular acceleration, and cocos2d will update the sprite's rendering automatically based on those values.</p>
+
+<p>To start off, we'll initialize our sprite's position and velocity:
+<span class="code-block">
+me.position = (100, 100)<br />
+me.velocity = (0, 0)
+</span></p>
+
+<p>In order to do anything with the sprite, we'll need a way of capturing keyboard input, and a class that will allow us to translate that keyboard input into changes in the sprite's position, velocity, etc. We'll use pyglet (upon which cocos2d is built) for its <span class="code">KeyStateHandler</span> behavior, and attach that to our director:
+<span class="code-block">
+keyboard = key.KeyStateHandler()<br />
+director.window.push_handlers(keyboard)
+</span>
+
+<p>Next, we'll create a class for the player's movement:
+<span class="code-block">
+class Me(actions.Move):<br />
+&emsp;def step(self, dt):<br />
+&emsp;&emsp;super(Me, self).step(dt) # Run step function on the parent class.<br />
+&emsp;&emsp;# Determine velocity based on keyboard inputs.<br />
+&emsp;&emsp;velocity_x = 100 * (keyboard[key.RIGHT] - keyboard[key.LEFT])<br />
+&emsp;&emsp;velocity_y = 100 * (keyboard[key.UP] - keyboard[key.DOWN])<br />
+&emsp;&emsp;# Set the object's velocity.<br />
+&emsp;&emsp;self.target.velocity = (velocity_x, velocity_y)
+</span>
+When defining the class, we give it the base class of <span class="code">actions.Move</span>. We then define the <span class="code">step</span> function, which is called on every frame, and which includes an argument <span class="code">dt</span> which is equal to the number of seconds since the last call.</p>
+
+<p>Here, we're using the value of <span class="code">keyboard</span> to calculate the sprite's velocity, and storing it at <span class="code">self.target.velocity</span>. <span class="code">target</span> refers to the sprite object that we'll bind this class to.</p>
+
+<p>Note that the <span class="code">keyboard</span> object must be global so that it can be accessed from within the class.</p>
+
+<p>Back to our main function, we'll assign this new class Me to our sprite by using the <span class="code">do</span> function:
+<span class="code-block">
+me.do(Me())
+</span>
+</p>
+
+<p>That's right, sprite, you do you and I'll do me. All that's left is to create a scene, attach our layer, and feed that scene to the director:
+<span class="code-block">
+main_scene = scene.Scene(player_layer)<br />
+director.run(main_scene)
+</span>
+</p>
+
+<p>You're done! You now have a window (controlled by your director object), displaying a scene (stored at <span class="code">main_scene</span>), which contains a single layer (stored at <span class="code">player_layer</span>), containing a single sprite object (stored at <span class="code">me</span>), which is constantly acting based on how you defined your <span class="code">Me</span> class.</p>
+
+<p>The next tutorial will explain how to create a map for our player to walk around in, including a scrollable tileset!</p>
+
+<h4>3. Full code</h4>
+
+<p>
+<script src="http://gist-it.appspot.com/github/jpwright/cocos2d-python-tutorials/blob/master/01-getting-started/main.py"></script>
+</p>

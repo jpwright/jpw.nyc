@@ -1,8 +1,8 @@
-Crashlog created at 2014-10-17 15:02:16 -0700
+Crashlog created at 2015-01-28 16:57:04 -0800
 
 ===== MESSAGE:
 
-RuntimeError: Could not parse YAML for content/writing/galileo-cypress.html: (<unknown>): mapping values are not allowed in this context at line 2 column 21
+Errno::EADDRINUSE: Address already in use - bind(2)
 
 ===== COMPILATION STACK:
 
@@ -10,43 +10,33 @@ RuntimeError: Could not parse YAML for content/writing/galileo-cypress.html: (<u
 
 ===== STACK TRACE:
 
-  0. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/data_sources/filesystem.rb:266:in `rescue in parse'
-  1. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/data_sources/filesystem.rb:263:in `parse'
-  2. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/data_sources/filesystem.rb:89:in `block in load_objects'
-  3. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/data_sources/filesystem.rb:78:in `each'
-  4. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/data_sources/filesystem.rb:78:in `map'
-  5. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/data_sources/filesystem.rb:78:in `load_objects'
-  6. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/data_sources/filesystem.rb:37:in `items'
-  7. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:325:in `block in load_items'
-  8. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:324:in `each'
-  9. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:324:in `load_items'
-  10. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:243:in `load'
-  11. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:127:in `layouts'
-  12. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/compilation/compiler.rb:187:in `dependency_tracker'
-  13. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/memoization.rb:56:in `block in memoize'
-  14. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/compilation/compiler.rb:457:in `stores'
-  15. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/compilation/compiler.rb:146:in `unload'
-  16. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:274:in `unload'
-  17. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:254:in `rescue in load'
-  18. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/base/source_data/site.rb:258:in `load'
-  19. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/command_runner.rb:63:in `load_site'
-  20. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/commands/compile.rb:390:in `run'
-  21. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/command_runner.rb:14:in `block in call'
-  22. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
-  23. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
-  24. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/command_runner.rb:13:in `call'
-  25. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib/cri/command_dsl.rb:185:in `block in runner'
-  26. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib/cri/command.rb:298:in `call'
-  27. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib/cri/command.rb:298:in `run_this'
-  28. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib/cri/command.rb:251:in `run'
-  29. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib/cri/command.rb:264:in `run'
-  30. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli.rb:59:in `block in run'
-  31. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
-  32. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
-  33. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli.rb:57:in `run'
-  34. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/bin/nanoc:19:in `<top (required)>'
-  35. /usr/local/bin/nanoc:23:in `load'
-  ... 38 more lines omitted. See full crash log for details.
+  0. /usr/lib/ruby/1.9.1/webrick/utils.rb:85:in `initialize'
+  1. /usr/lib/ruby/1.9.1/webrick/utils.rb:85:in `new'
+  2. /usr/lib/ruby/1.9.1/webrick/utils.rb:85:in `block in create_listeners'
+  3. /usr/lib/ruby/1.9.1/webrick/utils.rb:82:in `each'
+  4. /usr/lib/ruby/1.9.1/webrick/utils.rb:82:in `create_listeners'
+  5. /usr/lib/ruby/1.9.1/webrick/server.rb:82:in `listen'
+  6. /usr/lib/ruby/1.9.1/webrick/server.rb:70:in `initialize'
+  7. /usr/lib/ruby/1.9.1/webrick/httpserver.rb:45:in `initialize'
+  8. /var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/handler/webrick.rb:11:in `new'
+  9. /var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/handler/webrick.rb:11:in `run'
+  10. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/commands/view.rb:55:in `run'
+  11. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/command_runner.rb:14:in `block in call'
+  12. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  13. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  14. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/command_runner.rb:13:in `call'
+  15. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib/cri/command_dsl.rb:185:in `block in runner'
+  16. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib/cri/command.rb:298:in `call'
+  17. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib/cri/command.rb:298:in `run_this'
+  18. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib/cri/command.rb:251:in `run'
+  19. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib/cri/command.rb:264:in `run'
+  20. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli.rb:59:in `block in run'
+  21. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:70:in `handle_while'
+  22. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli/error_handler.rb:26:in `handle_while'
+  23. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib/nanoc/cli.rb:57:in `run'
+  24. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/bin/nanoc:19:in `<top (required)>'
+  25. /usr/local/bin/nanoc:23:in `load'
+  ... 28 more lines omitted. See full crash log for details.
 
 ===== VERSION INFORMATION:
 
@@ -69,31 +59,84 @@ Linux FARADAY 3.11.0-15-generic #25-Ubuntu SMP Thu Jan 30 17:22:01 UTC 2014 x86_
 
 ===== ENVIRONMENT:
 
+CLUTTER_IM_MODULE => "xim"
+COLORFGBG => "15;0"
 COMP_WORDBREAKS => " \t\n\"'><;|&(:"
-DISPLAY => "localhost:11.0"
+DBUS_SESSION_BUS_ADDRESS => "unix:abstract=/tmp/dbus-nKdh0VfkwP"
+DEFAULTS_PATH => "/usr/share/gconf/kde-plasma.default.path"
+DESKTOP_SESSION => "kde-plasma"
+DISPLAY => ":0"
+GDMSESSION => "kde-plasma"
+GDM_LANG => "en_US"
+GNOME_KEYRING_CONTROL => "/run/user/1000/keyring-0TbXRT"
+GNOME_KEYRING_PID => "2241"
+GPG_AGENT_INFO => "/run/user/1000/keyring-0TbXRT/gpg:0:1"
+GS_LIB => "/home/jason/.fonts"
+GTK2_RC_FILES => "/etc/gtk-2.0/gtkrc:/home/jason/.gtkrc-2.0:/home/jason/.kde/share/config/gtkrc-2.0"
+GTK_IM_MODULE => "ibus"
+GTK_MODULES => "overlay-scrollbar"
+GTK_RC_FILES => "/etc/gtk/gtkrc:/home/jason/.gtkrc:/home/jason/.kde/share/config/gtkrc"
 HOME => "/home/jason"
+IM_CONFIG_PHASE => "1"
+INSTANCE => ""
+JOB => "dbus"
+KDE_FULL_SESSION => "true"
+KDE_MULTIHEAD => "false"
+KDE_SESSION_UID => "1000"
+KDE_SESSION_VERSION => "4"
 KIGITHUB => "https://github.com/KiCad"
+KONSOLE_DBUS_SERVICE => ":1.12176"
+KONSOLE_DBUS_SESSION => "/Sessions/17"
+KONSOLE_DBUS_WINDOW => "/Windows/3"
+KONSOLE_PROFILE_NAME => "Shell"
 LANG => "en_US.UTF-8"
+LANGUAGE => "en_US"
 LD_LIBRARY_PATH => "/usr/local/lib"
 LESSCLOSE => "/usr/bin/lesspipe %s %s"
 LESSOPEN => "| /usr/bin/lesspipe %s"
 LOGNAME => "jason"
 LS_COLORS => "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:"
-MAIL => "/var/mail/jason"
+MANDATORY_PATH => "/usr/share/gconf/kde-plasma.mandatory.path"
 OLDPWD => "/media/jason/e/projects/jpwright.net/content"
+PAM_KWALLET_LOGIN => "/tmp//jason.socket"
 PATH => "/usr/local/lib/:/media/jason/e/apps/eagle/eagle-6.5.0/bin:/media/jason/e/projects/giffy:/media/jason/e/projects/sh:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+PROFILEHOME => ""
 PWD => "/media/jason/e/projects/jpwright.net"
+QT4_IM_MODULE => "ibus"
+QT_IM_MODULE => "ibus"
+QT_PLUGIN_PATH => "/home/jason/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/"
 QT_QPA_PLATFORMTHEME => "appmenu-qt5"
+SELINUX_INIT => "YES"
+SESSION => "kde-plasma"
+SESSIONTYPE => ""
+SESSION_MANAGER => "local/FARADAY:@/tmp/.ICE-unix/2519,unix/FARADAY:/tmp/.ICE-unix/2519"
 SHELL => "/bin/bash"
+SHELL_SESSION_ID => "f6d4a172d2ed4000b31849f30b5ab0c9"
 SHLVL => "1"
-SSH_CLIENT => "151.226.52.235 61282 22"
-SSH_CONNECTION => "151.226.52.235 61282 10.0.0.9 22"
-SSH_TTY => "/dev/pts/10"
+SSH_AUTH_SOCK => "/run/user/1000/keyring-0TbXRT/ssh"
 TERM => "xterm"
+TEXTDOMAIN => "im-config"
+TEXTDOMAINDIR => "/usr/share/locale/"
+UPSTART_EVENTS => "started xsession"
+UPSTART_INSTANCE => ""
+UPSTART_JOB => "startkde"
+UPSTART_SESSION => "unix:abstract=/com/ubuntu/upstart-session/1000/2244"
 USER => "jason"
+WINDOWID => "96469639"
+XAUTHORITY => "/tmp/kde-jason/xauth-1000-_0"
+XCURSOR_SIZE => "24"
+XCURSOR_THEME => "oxy-white"
+XDG_CONFIG_DIRS => "/etc/xdg/xdg-kde-plasma:/usr/share/upstart/xdg:/etc/xdg"
+XDG_CURRENT_DESKTOP => "KDE"
+XDG_DATA_DIRS => "/usr/share:/usr/share/kde-plasma:/usr/local/share/:/usr/share/"
+XDG_GREETER_DATA_DIR => "/var/lib/lightdm-data/jason"
 XDG_RUNTIME_DIR => "/run/user/1000"
-XDG_SESSION_COOKIE => "73bb7844ae55db8f3005e83552ce0206-1413580496.747145-1218846328"
-XDG_SESSION_ID => "8347"
+XDG_SEAT => "seat0"
+XDG_SEAT_PATH => "/org/freedesktop/DisplayManager/Seat0"
+XDG_SESSION_ID => "c2"
+XDG_SESSION_PATH => "/org/freedesktop/DisplayManager/Session0"
+XDG_VTNR => "7"
+XMODIFIERS => "@im=ibus"
 _ => "/usr/local/bin/nanoc"
 
 ===== LOAD PATHS:
@@ -102,11 +145,13 @@ _ => "/usr/local/bin/nanoc"
   1. /var/lib/gems/1.9.1/gems/colored-1.2/lib
   2. /var/lib/gems/1.9.1/gems/cri-2.4.1/lib
   3. /var/lib/gems/1.9.1/gems/nanoc-3.6.7/lib
-  4. /usr/local/lib/site_ruby/1.9.1
-  5. /usr/local/lib/site_ruby/1.9.1/x86_64-linux
-  6. /usr/local/lib/site_ruby
-  7. /usr/lib/ruby/vendor_ruby/1.9.1
-  8. /usr/lib/ruby/vendor_ruby/1.9.1/x86_64-linux
-  9. /usr/lib/ruby/vendor_ruby
-  10. /usr/lib/ruby/1.9.1
-  11. /usr/lib/ruby/1.9.1/x86_64-linux
+  4. /var/lib/gems/1.9.1/gems/rack-1.5.2/lib
+  5. /var/lib/gems/1.9.1/gems/adsf-1.2.0/lib
+  6. /usr/local/lib/site_ruby/1.9.1
+  7. /usr/local/lib/site_ruby/1.9.1/x86_64-linux
+  8. /usr/local/lib/site_ruby
+  9. /usr/lib/ruby/vendor_ruby/1.9.1
+  10. /usr/lib/ruby/vendor_ruby/1.9.1/x86_64-linux
+  11. /usr/lib/ruby/vendor_ruby
+  12. /usr/lib/ruby/1.9.1
+  13. /usr/lib/ruby/1.9.1/x86_64-linux

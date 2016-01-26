@@ -3,3 +3,6 @@
 
 # Compiled output
 output/
+
+# Python scripts which shouldn't be visible to the general public
+*.py
