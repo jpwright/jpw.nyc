@@ -1,0 +1,92 @@
+--- 
+title: Designing a multiplayer game with Python and cocos2d, part 2 -- Building a scrollable map
+published: February 21, 2016
+kind: article
+---
+
+<p><em>Skip to: <a href="./python-cocos2d-game-1">Part 1</a>, <a href="./python-cocos2d-game-1">Part 2</a>.</em></p>
+
+<p>In part 1, we set up the basics of a cocos2d game and created a movable player object. In part 2, we'll create a scrollable map using the <a href="http://python.cocos2d.org/doc/api/cocos.tiles.html">cocos.tiles</a> module.</p>
+
+<h4>1. Creating a tile map</h4>
+
+<p>In cocos2d, a tile map needs at least three files:</p>
+
+<p>
+<ul>
+    <li>a <em>spritesheet</em> containing the underlying tiles that will make up the map.</li>
+    <li>a <em>tile definition file</em> that defines the borders of each sprite in the spritesheet, and assigns those sprites to a set of tiles.</li>
+    <li>a <em>map definition file</em> that arranges tiles into a map.</li>
+</ul>
+</p>
+
+<p>In the <a href="https://github.com/jpwright/cocos2d-python-tutorials/tree/master/02-scrollable-map">repository for this tutorial</a>, we've placed each of these files (tilemap.png, tiles.xml, and map.xml) in the <span class="code">tiles</span> directory.</p>
+
+<p>I created a custom spritesheet using <a href="https://www.gimp.org/">GIMP</a>, but you can easily find freely available spritesheets online. <a href="http://spritedatabase.net/">Sprite Database</a> is a great place to get started.</p>
+
+<p>The definition files can be in one of two formats: <a href="http://doc.mapeditor.org/reference/tmx-map-format/">TMX</a>, or the <a href="http://python.cocos2d.org/doc/programming_guide/tiled_map.html#the-xml-file-specification">cocos2d XML file specification</a>. I used the latter and created the XML files manually, but TMX is also a fine choice. There are many free tile map editors available, including <a href="http://www.mapeditor.org/">Tiled</a>, which creates maps in the TMX format.</p>
+
+<h4>2. Creating the map layer and scroller object</h4>
+
+<p>Before we do anything, we'll first want to import the tiles module:</p>
+
+<p>
+<span class="code-block">
+from cocos import tiles
+</span>
+</p>
+
+<p>Next, we'll create a map layer. In Part 1, we created a layer object called <span class="code">player_layer</span> and added one object: the player sprite (called <span class="code">me</span>). To put our player on a map, we'll want to create a second layer object for our map. We'll use the tiles module to automatically populate this layer with tiles (as defined in our .xml files), using sprites from our map spritesheet.</p>
+
+<p>
+<span class="code-block">
+map_layer = tiles.load('tiles/map.xml')['map0']
+</span>
+</p>
+
+<p>In map.xml, you can create multiple map definitions, each with a unique ID. In our example map.xml, we created just one and gave it the ID 'map0', so we use that ID as the index when creating the map layer.</p>
+
+<p>Note that we only need to reference map.xml, not tiles.xml or tilemap.png, within our python code. map.xml provides the reference to tiles.xml in the first line -- <span class="code">&lt;resource&gt;&lt;requires file="tiles.xml" /&gt;</span> -- and tiles.xml provides the reference to tilemap.png in the third line -- <span class="code">&lt;imageatlas size="32x32" file="tilemap.png"&gt;</span></p>
+
+<p>Next, we'll create a <a href="http://python.cocos2d.org/doc/api/cocos.layer.scrolling.html#cocos.layer.scrolling.ScrollingManager">ScrollingManager</a> object.</p>
+
+<p>
+<span class="code-block">
+global scroller<br />
+<br />
+scroller = layer.ScrollingManager()<br />
+</span>
+</p>
+
+<p>The ScrollingManager manages layers for us -- it allows us to convert 'world' coordinates to 'screen' coordinates. Consider 'world' coordinates relative to the map, such that the top left corner of the map is at World(0,0). The 'screen' coordinates are relative to what's actually being displayed on the screen, such that the top left corner of the game window is always at Screen(0,0). If our game starts out at the top-left corner of the map, then Screen(0,0) and World(0,0) will refer to the same point. However, as the player moves around, the world will shift such that a different portion of the map appears at Screen(0,0).</p>
+
+<p>Once our scroller object has been created, we'll add our map and player layers to it. We'll also modify our <span class="code">main_scene</span> object to set the initial layer to the scroller object.</p>
+
+<p>
+<span class="code-block">
+# Add map and player layers.<br />
+scroller.add(map_layer)<br />
+scroller.add(player_layer)<br />
+<br />
+# Create a scene and set its initial layer.<br />
+main_scene = scene.Scene(scroller)<br />
+</span>
+</p>
+
+<p>One last thing to do. In our <span class="code">step</span> function within our player class, <span class="code">Me</span>, we'll add a call to the <span class="code">set_focus</span> method of our ScrollingManager object. This call tells the ScrollingManager to scroll all layers to "center" around the point to which the player is moving, to the extent that the map boundaries allow.</p>
+
+<p>
+<span class="code-block">
+scroller.set_focus(self.target.x, self.target.y)
+</span>
+</p>
+
+<p>That's it! If all works out, we should see the map appear underneath the player sprite. We should be able to move around and have the map and player layers scroll accordingly.</p>
+
+<p><img src="/images/writing/python-cocos2d/02-02-coordinates.png" alt="Output of main.py" /></p>
+
+<h4>3. Full code</h4>
+
+<p>
+<script src="http://gist-it.appspot.com/github/jpwright/cocos2d-python-tutorials/blob/master/02-scrollable-map/main.py"></script>
+</p>
