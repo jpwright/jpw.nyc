@@ -13,26 +13,42 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/stylesheet/' do
+compile '/stylesheet.css' do
   # don’t filter or layout
 end
 
-compile '/writing/' do
-  filter :erb
-  layout 'default'
+compile '/images/*' do
+  # don't filter or layout
+end
+
+compile '/images/*/*' do
+  # don't filter or layout
+end
+
+compile '/images/*/*/*' do
+  # don't filter or layout
 end
 
 compile '/writing/*' do
   filter :erb
-  layout 'article'
+  layout '/article/'
 end
 
-compile '*' do
+compile '/projects/*' do
+  filter :erb
+  layout '/article/'
+end
+
+compile '/documents/*' do
+  # don't filter or layout
+end
+
+compile '/*' do
   if item.binary?
-    # don’t filter binary items
+    # don't filter or layout
   else
     filter :erb
-    layout 'default'
+    layout '/default/'
   end
 end
 

@@ -23,11 +23,12 @@ a:hover {
 }
 
 #main {
+  box-sizing: border-box;
   margin-left: 10%;
   margin-top: 20px;
   margin-bottom: 50px;
   width: 670px;
-
+  max-width: 100%;
   line-height: 1.5em;
 }
 

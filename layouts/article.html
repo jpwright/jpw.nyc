@@ -3,7 +3,7 @@
     <h1><%= item[:title] %></h1>
     <p>
 	<span class="metadata">Published: <%= item[:published] %></span><br />
-	<span class="metadata"><%= item[:updated] %></span>
+	<% if @item[:updated] %><span class="metadata"><%= item[:updated] %></span><% end %>
     </p>
     <article>
       <%= yield %>
