@@ -6,32 +6,32 @@ title: Electronic Signing for Confluence Cloud
 <span class="metadata">August 2017</span>
 </p>
 
-<h2>Documentation</h2>
-<h3>Signing a page</h3>
+<h3>Documentation</h3>
+<h4>Signing a page</h4>
 <p>While viewing a document, click the menu (typically the three-dot icon which also has links to Move, Copy, Delete, etc.) and choose "Add Signature". You should see a dialog appear. Fill out the dialog with your email, password, "meaning", and (optional) comment.</p>
 <p>The add-on will verify that the email and password match the presently logged in Confluence user. If not, the email and password fields are highlighted in red to indicate a problem. Note that too many invalid attempts may temporarily disable the ability to sign documents. (This is a restriction of the Confluence API.)</p>
-<h3>Viewing signatures</h3>
+<h4>Viewing signatures</h4>
 <p>While editing a page, add the Signatures macro (click the plus-sign icon and choose Signatures). The macro should display all previous signatures, with timestamps and links to the profile page of the user that signed the document.</p>
 <p>At this time it is not possible to edit or delete signatures.</p>
 
-<h2>Data security statement</h2>
-<h3>Overview</h3>
+<h3>Data security statement</h3>
+<h4>Overview</h4>
 <p>
 The Electronic Signature add-on enables 21 CFR 11 compliant document signing on Confluence Cloud. Primarily, the add-on ensures that all signatures are authenticated at the time of signature, and have timestamps and “meaning” associated with them. All transactions with Confluence Cloud are secured using Atlassian Connect Express / JWT.
 </p>
-<h3>Data storage</h3>
+<h4>Data storage</h4>
 <p>
 The add-on does not store any data whatsoever. It serves three endpoints: the “Add Signature” dialog template, the “Signatures” macro, and an “authentication” endpoint used to “double check” Atlassian username and password credentials.
 </p>
-<h3>Certification</h3>
+<h4>Certification</h4>
 <p>
 The add-on is not certified by any authority. 21 CFR 11 compliance is a complex process, and this add-on is merely a small part. Full compliance will depend on Confluence settings, user management, and other operational processes.
 </p>
-<h3>Backups</h3>
+<h4>Backups</h4>
 <p>
 Because no data is stored, no backups take place.
 </p>
-<h3>Privacy</h3>
+<h4>Privacy</h4>
 <p>
 All transactions are secured using HTTPS/JWT. Because no user data is stored, there is no long-term privacy risk to using this add-on.
 </p>
