@@ -1,0 +1,39 @@
+--- 
+title: Face(book)<sup>2</sup>
+---
+
+<p>
+<span class="metadata">August 2012</span>
+</p>
+
+<p>
+<img src="/images/projects/facebook-squared-header.png" />
+</p>
+
+<p>Face(book)<sup>2</sup> is a physical manifestation of Facebook -- literally, Facebook inside of a book.</p>
+
+<p>Created with <a href="http://jeremyblum.com">Jeremy Blum</a> at <a href="https://www.facebook.com/events/100370656773845/">Facebook Summer of Hack NYC</a>, it allows you to read & interact with Facebook inside of a hollowed-out textbook. Using an Arduino Mega, a pair of XBee RF transceivers, and a bunch of miscellaneous electronics, you can browse through your news feed, view posts & comments, and "like" stories.</p>
+
+<p>At the beginning of the hackathon, we didn't really know what we wanted to make, other than something involving hardware. Although I've worked on software projects</a> at hackathons before, I really love working with electronics and building things with my hands. So Jeremy and I lugged huge duffel bags full of random electronics to Facebook's NYC headquarters and got to work.</p>
+
+<p>Once we planned out the idea, we spent a while searching in Barnes & Noble for a book that was suitably large to fit all the electronics inside. We then set to work building the project, starting with writing a wrapper for the Facebook Open Graph API for the Arduino. In Python, using <a href="http://github.com/facebook/fbconsole">fbconsole</a>, a stationary computer communicates with Facebook and sends data over a serial connection using a limited communication protocol that we devised.</p>
+
+<p>Since we're limited by the size of the serial buffer, we took the time to format everything for display on a few character LCDs in Python. The Python script also handles a simple state machine, meaning that the Arduino can simply send commands like ".n" (for "next") and the computer will return the appropriate posts, knowing where the previous posts were cut off by the displays.</p>
+
+<p>We also spent a while devising a method to display profile pictures on a <a href="http://www.adafruit.com/products/338">Nokia LCD</a> from <a href="http://www.adafruit.com">Adafruit</a>, from the <a href="http://www.jpwright.net/hhw-prereqs/">hackNY hardware workshop</a> I ran earlier this summer. It turns out it's easy to get profile picture thumbnails that are the right size, but formatting it properly was a lot of work -- using the Python Image library, the picture is converted to monochrome, then carefully written out as a string of bits which the Arduino interprets using the Adafruit Graphics Library. It turns out that converting a bitmap to a suitable character array is not easy to do on the fly -- there's <a href="http://www.random-i.com/NokiaLCD/">desktop software</a> that does this well, but it's a pain to implement for something dynamic like profile pictures.</p>
+<p>We used an accelerometer, <a href="http://www.adafruit.com/products/163">also from Adafruit</a>, to allow scrolling by turning the cover of the book. Once the angle of the cover crosses a certain threshold, a "scroll" command is sent from the Arduino to the computer. A few buttons were attached -- one to let you click on each post, one to return to the home screen, and a dedicated "like" button. In addition, we used a limit switch to detect when the book was opened or closed.</p>
+
+<p>
+<h4>Video</h4>
+</p>
+<p><iframe src="http://www.youtube.com/embed/ssjK78L1oas" frameborder="0" width="560" height="315"></iframe></p>
+
+<p>
+<h4>More Information</h4>
+</p>
+<p>
+<a href="https://github.com/jpwright/facebook-squared">View schematics and code on Github</a><br />
+<a href="http://hackaday.com/2012/07/30/hackathon-results-in-the-facebook-book/">View Hackaday writeup</a><br />
+<a href="http://www.jeremyblum.com/portfolio/face-book-squared/">View Jeremy's blog post</a>
+
+</p>

@@ -2,7 +2,7 @@
   <div class='post'>
     <h1><%= item[:title] %></h1>
     <p>
-	<span class="metadata">Published: <%= item[:published] %></span><br />
+	<% if @item[:published] %><span class="metadata">Published: <%= item[:published] %></span><br /><% end %>
 	<% if @item[:updated] %><span class="metadata"><%= item[:updated] %></span><% end %>
     </p>
     <article>
