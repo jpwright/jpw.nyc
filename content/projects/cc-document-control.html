@@ -1,0 +1,293 @@
+---
+title: Document Control for Confluence Cloud
+---
+
+<link href="/css/lightbox.min.css" rel="stylesheet">
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/lightbox.min.js"></script>
+
+<p>
+<span class="metadata">April 2018</span>
+</p>
+
+<div class="article-row">
+  <div class="article-column article-column-sticky">
+  	<ul>
+  		<li>
+  			<a href="#documentation">Documentation</a>
+  			<ul>
+  				<li><a href="#installing">Installing the add-on</a></li>
+  				<li><a href="#configuring">Configuring the add-on</a></li>
+  				<li><a href="#creating">Creating a controlled document</a></li>
+  				<li><a href="#assigning">Assigning reviewers</a></li>
+  				<li><a href="#signing">Signing a page</a></li>
+  				<li><a href="#status">Document control status</a></li>
+  				<li><a href="#macro">Using the space-level macro</a></li>
+  			</ul>
+  		</li>
+  		<li>
+  			<a href="#troubleshooting">Troubleshooting</a>
+  			<ul>
+  				<li><a href="#restrictions">Page/space restrictions</a></li>
+  				<li><a href="#versioning">Page versioning</a></li>
+  				<li><a href="#copy">Page copying</a></li>
+  				<li><a href="#saml">SAML/SSO</a></li>
+  			</ul>
+  		</li>
+  		<li>
+  			<a href="#security">Data security statement</a>
+  			<ul>
+  				<li><a href="#security-overview">Overview</a></li>
+  				<li><a href="#security-data-storage">Data storage</a></li>
+  				<li><a href="#security-certification">Certification</a></li>
+  				<li><a href="#security-backups">Backups</a></li>
+  				<li><a href="#security-privacy">Privacy</a></li>
+  			</ul>
+  		</li>
+  	</ul>
+  </div>
+  <div class="article-column">
+  	<a name="documentation"><h3>Documentation</h3></a>
+  	<br />
+  	<a name="installing"><h4>Installing the add-on</h4></a>
+  	<p>
+  		You can install Document Control for Confluence Cloud from the <a href="https://marketplace.atlassian.com/plugins/electronic-signing-cc/cloud/overview">Atlassian Marketplace</a>. Click the "Try it free" button to get started.
+  	</p>
+  	<a name="configuring"><h4>Configuring the add-on</h4></a>
+  	<p>
+  		Once the add-on is installed, expand the Document Control for Confluence Cloud add-on in the Universal Plugin Manager and click "Configure".
+  	</p>
+  	<p>
+  		<a href="/images/projects/dccc-configure-upm.png" data-lightbox="dccc-configure-upm" data-title="The Universal Plugin Manager view of the add-on.">
+  			<img class="thumb" src="/images/projects/dccc-configure-upm.png" />
+  		</a>
+  	</p>
+  	<p>
+  		The configuration page provides many useful settings:
+  	</p>
+  	<p>
+  		<a href="/images/projects/dccc-configuration.png" data-lightbox="dccc-configuration" data-title="The add-on configuration page.">
+  			<img class="thumb" src="/images/projects/dccc-configuration.png" />
+  		</a>
+  	</p>
+  	<p>
+  		The <strong>Meanings</strong> settings allow the configuration of meanings associated with each signature added to a control document. You can customize the available Meaning options (the default options are based on the language of <a href="https://www.law.cornell.edu/cfr/text/21/11.50">21 CFR § 11.50</a>), or disable Meanings entirely.
+  	</p>
+  	<p>
+  		<strong>Email notification</strong> will trigger automatic emails to reviewers whenever they are added to a page.
+  	</p>
+  	<p>
+  		<strong>Authentication</strong> requires users to authenticate using their Confluence login before signing a page. (If your intent is to comply with 21 CFR 11, you should enable this setting.)
+  	</p>
+  	<a name="creating"><h4>Creating a controlled document</h4></a>
+  	<p>
+  		If you are creating a new page from scratch, the best practice is to choose the "Controlled document" template from the Create dialog:
+  	</p>
+  	<p>
+  		<a href="/images/projects/dccc-new-page.png" data-lightbox="dccc-new-page" data-title="Choosing the Controlled Document template.">
+  			<img class="thumb" src="/images/projects/dccc-new-page.png" />
+  		</a>
+  	</p>
+  	<p>
+  		This template sets up the page with everything needed for use with the Document Control add-on.
+  	</p>
+  	<p>
+  		If you want to use a different template, or if you want to take an existing page and convert it to a controlled document, it's a simple two-step process:
+  	</p>
+  	<p>
+  		<strong>1.</strong> Add the "Document Control" macro somewhere in the body of the page (typically at the bottom):
+  	</p>
+  	<p>
+  		<a href="/images/projects/dccc-insert-macro-1.png" data-lightbox="dccc-insert-macro-1" data-title="Inserting the Document Control macro.">
+  			<img class="thumb" src="/images/projects/dccc-insert-macro-1.png" />
+  		</a>
+  		<a href="/images/projects/dccc-insert-macro-2.png" data-lightbox="dccc-insert-macro-2" data-title="Inserting the Document Control macro.">
+  			<img class="thumb" src="/images/projects/dccc-insert-macro-2.png" />
+  		</a>
+  	</p>
+  	<p>
+  		<strong>2.</strong> Add the "controlled-document" label to the page:
+  	</p>
+  	<p>
+  		<a href="/images/projects/dccc-add-label-1.png" data-lightbox="dccc-add-label-1" data-title="Adding the Document Control label.">
+  			<img class="thumb" src="/images/projects/dccc-add-label-1.png" />
+  		</a>
+  		<a href="/images/projects/dccc-add-label-2.png" data-lightbox="dccc-add-label-2" data-title="Adding the Document Control label.">
+  			<img class="thumb" src="/images/projects/dccc-add-label-2.png" />
+  		</a>
+  	</p>
+  	<a name="assigning"><h4>Assigning reviewers</h4></a>
+  	<p>
+  		There are two ways to add reviewers to a page:
+  	</p>
+  	<p>
+  		<strong>1.</strong> Click the Document Control byline on the page (the link under the page title)<br />
+  		<strong>2.</strong> From the page menu (the three-dot icon with links to Move, Copy, Delete, etc.), click "Manage Reviewers".
+  	</p>
+  	<p>
+  		Once the "Manage Reviewers" dialog is open, you can add a reviewer to a page by searching by name.
+  	</p>
+  	<p>
+  		<a href="/images/projects/dccc-add-reviewer-1.png" data-lightbox="dccc-add-reviewer-1" data-title="Adding a reviewer.">
+  			<img class="thumb" src="/images/projects/dccc-add-reviewer-1.png" />
+  		</a>
+  		<a href="/images/projects/dccc-add-reviewer-2.png" data-lightbox="dccc-add-reviewer-2" data-title="Adding a reviewer.">
+  			<img class="thumb" src="/images/projects/dccc-add-reviewer-2.png" />
+  		</a>
+  	</p>
+  	<p>
+  		You can also use this dialog to remove a reviewer by clicking the small "x" next to each reviewer's name.
+  	</p>
+  	<p>
+  		If you have the <strong>Email notification</strong> setting enabled, the new reviewer will receive an email inviting them to review the page:
+  	</p>
+  	<p>
+  		<a href="/images/projects/dccc-email.png" data-lightbox="dccc-email" data-title="Email notification for new reviewer.">
+  			<img class="thumb" src="/images/projects/dccc-email.png" />
+  		</a>
+  	</p>
+  	<p>
+  		The page's document control status will change to <em>Needs Review</em> until all reviewers have added a signature to the page.
+  	</p>
+	<a name="signing"><h4>Signing a page</h4></a>
+	<p>
+		From the page menu, click "Add Signature":
+	</p>
+	<p>
+  		<a href="/images/projects/dccc-add-signature-1.png" data-lightbox="dccc-add-signature-1" data-title="Opening the Add Signature dialog.">
+  			<img class="thumb" src="/images/projects/dccc-add-signature-1.png" />
+  		</a>
+  	</p>
+  	<p>
+  		Fill out the form and click Submit to sign the page.
+  	</p>
+  	<p>
+  		If the <strong>Authentication</strong> setting is enabled, the user is required to enter their email and password, and this much the presently logged in Confluence user. If not, the email and password fields are highlighted in red to indicate a problem:
+  	</p>
+  	<p>
+  		<a href="/images/projects/dccc-add-signature-2.png" data-lightbox="dccc-add-signature-2" data-title="Signing a page.">
+  			<img class="thumb" src="/images/projects/dccc-add-signature-2.png" />
+  		</a>
+  	</p>
+  	<a name="status"><h4>Document control status</h4></a>
+  	<p>
+  		All pages set up for document control will have one of three statuses:
+  	</p>
+  	<p>
+  		<ol>
+  			<li><strong>Not reviewed</strong> - No reviewers have been added to this page.</li>
+  			<li><strong>Needs review</strong> - One or more reviewers have been added to this page, but not all reviewers have signed the most recent version of the page.</li>
+  			<li><strong>Reviewed</strong> - All reviewers have signed the most recent version of the page.</li>
+  		</ol>
+  	</p>
+  	<p>
+  		The document control status is reflected in the byline (the link under the page title) of each page. It's also reflected in the Document Control macro. For example, in the following screenshot, Jason Wright and Lucille Bluth have been assigned as reviewers, but only Lucille Bluth has signed:
+  	</p>
+  	<p>
+  		<a href="/images/projects/dccc-macro-needs-review.png" data-lightbox="dccc-macro-needs-review" data-title="Page that needs review.">
+  			<img class="thumb" src="/images/projects/dccc-macro-needs-review.png" />
+  		</a>
+  	</p>
+  	<p>
+  		Once Jason Wright signs the page, the page looks like this:
+  	</p>
+  	<p>
+  		<a href="/images/projects/dccc-macro-reviewed.png" data-lightbox="dccc-macro-reviewed" data-title="Page that has been fully reviewed.">
+  			<img class="thumb" src="/images/projects/dccc-macro-reviewed.png" />
+  		</a>
+  	</p>
+  	<p>
+  		If the page is edited, all reviewers will need to sign the page again to maintain the "Reviewed" status; see <a href="#versioning">Page versioning</a> for more details.
+  	</p>
+  	<a name="macro"><h4>Using the space-level macro</h4></a>
+  	<p>
+  		To see the document control status of all pages in a space at a glance, you can use the "Space View" setting of the Document Control macro. Typically, you might want to add the macro to the top-level page in a space.
+  	</p>
+  	<p>
+  		<a href="/images/projects/dccc-space-view.png" data-lightbox="dccc-space-view" data-title="Example of the Space View macro.">
+  			<img class="thumb" src="/images/projects/dccc-space-view.png" />
+  		</a>
+  	</p>
+  	<a name="troubleshooting"><h3>Troubleshooting</h3></a>
+  	<br />
+  	<a name="restrictions"><h4>Page/space restrictions</h4></a>
+  	<p>
+  		If you have view/edit restrictions enforced either on a space or a page and wish to use the Document Control add-on, you'll need to ensure that the add-on user has both view and edit privileges. For example, click "Restrictions" from the page menu:
+  	</p>
+  	<p>
+  		<a href="/images/projects/dccc-restrictions-1.png" data-lightbox="dccc-restrictions-1" data-title="Opening the Restrictions dialog.">
+  			<img class="thumb" src="/images/projects/dccc-restrictions-1.png" />
+  		</a>
+  	</p>
+  	<p>
+  		Add the "Document Control for Confluence Cloud" user:
+  	</p>
+  	<p>
+  		<a href="/images/projects/dccc-restrictions-2.png" data-lightbox="dccc-restrictions-2" data-title="Giving privileges to the add-on user.">
+  			<img class="thumb" src="/images/projects/dccc-restrictions-2.png" />
+  		</a>
+  	</p>
+  	<a name="versioning"><h4>Page versioning</h4></a>
+  	<p>
+  		The Document Control add-on uses Confluence's built-in versioning system to ensure that signatures are linked to a specific version of a page. For example, if a page has been signed by all reviewers, but is then edited, the Document Control macro will show that those signatures were for previous versions of the page:
+  	</p>
+  	<p>
+  		<a href="/images/projects/dccc-versioning-1.png" data-lightbox="dccc-versioning-1" data-title="Signatures for a previous version of the page.">
+  			<img class="thumb" src="/images/projects/dccc-versioning-1.png" />
+  		</a>
+  	</p>
+  	<p>
+  		You can click the link in the macro to see the full version history of the page:
+  	</p>
+  	<p>
+  		<a href="/images/projects/dccc-versioning-2.png" data-lightbox="dccc-versioning-2" data-title="Viewing a page's version history.">
+  			<img class="thumb" src="/images/projects/dccc-versioning-2.png" />
+  		</a>
+  	</p>
+  	<p>
+  		Note: Restoring a page to a previous version does not resolve the need to re-sign the page. This is because Confluence actually creates a new version that duplicates the restored version.
+  	</p>
+  	<a name="copy"><h4>Page copying</h4></a>
+  	<p>
+  		The Document Control add-on stores information in each page's <a href="https://developer.atlassian.com/cloud/confluence/content-properties/">content properties</a>. This is essentially a form of metadata stored in the page without being directly visible in the page's body.
+  	</p>
+  	<p>
+  		The way Confluence handles content properties:
+  	</p>
+  	<p>
+  		<ul>
+  			<li>When a page is <strong>moved</strong>, content properties are <strong>preserved</strong>.</li>
+  			<li>When a page is <strong>copied</strong>, content properties are <strong>not preserved</strong>.</li>
+  		</ul>
+  	</p>
+  	<p>
+  		As a result, <strong>copies of controlled documents will not preserve signatures or reviewers</strong>. You should make sure to keep the original page intact and <strong>move</strong> it around your Confluence instance instead of making copies.
+  	</p>
+  	<a name="saml"><h4>SAML/SSO</h4></a>
+  	<p>
+  		If you use <a href="https://confluence.atlassian.com/cloud/saml-single-sign-on-943953302.html">SAML single sign-on</a> to authenticate with Confluence, it's highly likely that the <strong>Authentication</strong> setting will not work. Your users need to have an Atlassian account and password for the add-on's authentication process to work.
+  	</p>
+  	<a name="security"><h3>Data security statement</h3></a>
+  	<br />
+	<a name="security-overview"><h4>Overview</h4></a>
+	<p>
+	The Document Control add-on enables review and 21 CFR 11 compliant document signing on Confluence Cloud, including the ability to ensure that all signatures are authenticated at the time of signature. All transactions with Confluence Cloud are secured using Atlassian Connect Express / JWT.
+	</p>
+	<a name="security-data-storage"><h4>Data storage</h4></a>
+	<p>
+	The add-on server stores only your <a href="#configuration">configuration settings</a>. It does not store any data from your Confluence instance, including users, pages, reviewers, signatures, or anything else. All of the data generated by the add-on is stored in your Confluence instance, not the add-on server.
+	</p>
+	<a name="security-certification"><h4>Certification</h4></a>
+	<p>
+	The add-on is not certified by any authority. 21 CFR 11 compliance is a complex process, and this add-on is merely a small part. Full compliance will depend on Confluence settings, user management, and other operational processes.
+	</p>
+	<a name="security-backups"><h4>Backups</h4></a>
+	<p>
+	The add-on server, which only stores your <a href="#configuration">configuration settings</a>, is automatically backed up by <a href="https://www.heroku.com/postgres#features">Heroku</a>.
+	</p>
+	<a name="security-privacy"><h4>Privacy</h4></a>
+	<p>
+	All transactions are secured using HTTPS/JWT. Because no user data is stored, there is no long-term privacy risk to using this add-on.
+	</p>
+  </div>
+</div>

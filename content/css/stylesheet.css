@@ -70,7 +70,6 @@ a:hover {
 }
 
 #sidebar {
-
   margin-top: 40px;
   margin-left: 10%;
   min-height: 50px;
@@ -171,3 +170,48 @@ hr {
 .gist {
 	font-size: 0.75em;
 }	
+
+.article-row {
+  display: flex;
+}
+
+.article-column {
+  padding: 5px;
+  flex: 50%;
+}
+
+.article-column-sticky {
+  position: sticky;
+  flex: 10%;
+  top: 10px;
+  align-self: flex-start;
+}
+
+#main .article-column.article-column-sticky ul,ol {
+  margin: 0;
+}
+
+#main .article-column.article-column-sticky li {
+  margin: 0;
+  list-style-type: none;
+}
+
+#main .article-column.article-column-sticky ul li ul {
+  margin: 5px 0;
+}
+
+#main .article-column.article-column-sticky ul li ul li {
+  margin-left: 10px;
+}
+
+img.thumb {
+  max-width: 100%;
+}
+
+.lb-outerContainer {
+  background-color: transparent !important;
+}
+
+.lightbox .lb-image {
+  border: none !important;
+}
