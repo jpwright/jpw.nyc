@@ -182,7 +182,7 @@ hr {
 
 .article-column-sticky {
   position: sticky;
-  flex: 10%;
+  flex: 7%;
   top: 10px;
   align-self: flex-start;
 }
@@ -214,4 +214,25 @@ img.thumb {
 
 .lightbox .lb-image {
   border: none !important;
+}
+
+table {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+td {
+  padding: 5px;
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
+thead td {
+  border-bottom: 2px solid #c6d5e3;
+}
+
+thead {
+  background-color: rgba(198, 213, 227, 0.25);
 }

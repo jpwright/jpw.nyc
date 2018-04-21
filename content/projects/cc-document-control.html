@@ -10,6 +10,10 @@ title: Document Control for Confluence Cloud
 <span class="metadata">April 2018</span>
 </p>
 
+<style>
+#main { width: auto !important; padding-right: 20px; }
+</style>
+
 <div class="article-row">
   <div class="article-column article-column-sticky">
   	<ul>
@@ -44,6 +48,14 @@ title: Document Control for Confluence Cloud
   				<li><a href="#security-privacy">Privacy</a></li>
   			</ul>
   		</li>
+  		<li>
+  			<a href="#fda">21 CFR 11 compliance statement</a>
+  			<ul>
+  				<li><a href="#fda-components">Components</a></li>
+  				<li><a href="#fda-subpart-B">Subpart B - Electronic Records</a></li>
+  				<li><a href="#fda-subpart-C">Subpart C - Electronic Signatures</a></li>
+  			</ul>
+  		</li>
   	</ul>
   </div>
   <div class="article-column">
@@ -71,7 +83,7 @@ title: Document Control for Confluence Cloud
   		</a>
   	</p>
   	<p>
-  		The <strong>Meanings</strong> settings allow the configuration of meanings associated with each signature added to a control document. You can customize the available Meaning options (the default options are based on the language of <a href="https://www.law.cornell.edu/cfr/text/21/11.50">21 CFR § 11.50</a>), or disable Meanings entirely.
+  		The <strong>Meanings</strong> settings allow the configuration of meanings associated with each signature added to a control document. You can customize the available Meaning options (the default options are based on the language of <a href="https://www.law.cornell.edu/cfr/text/21/11.50">21 CFR §11.50</a>), or disable Meanings entirely.
   	</p>
   	<p>
   		<strong>Email notification</strong> will trigger automatic emails to reviewers whenever they are added to a page.
@@ -288,6 +300,142 @@ title: Document Control for Confluence Cloud
 	<a name="security-privacy"><h4>Privacy</h4></a>
 	<p>
 	All transactions are secured using HTTPS/JWT. Because no user data is stored, there is no long-term privacy risk to using this add-on.
+	</p>
+	<a name="fda"><h3>21 CFR 11 compliance statement</h3></a>
+	<br />
+	<a name="fda-components"><h4>Components</h4></a>
+	<p>
+		<table>
+			<thead>
+				<td>Component</td>
+				<td>Description</td>
+			</thead>
+			<tr>
+				<td>Confluence Cloud ("Confluence")</td>
+				<td>See <a href="https://confluence.atlassian.com/confcloud/confluence-cloud-documentation-home-941614888.html">Atlassian</a> documentation.</td>
+			</tr>
+			<tr>
+				<td>Document Control for Confluence Cloud ("Add-on")</td>
+				<td>A Confluence add-on providing technical solution for document review and electronic signing.</td>
+			</tr>
+		</table>
+	</p>
+	<a name="fda-subpart-B"><h4>Subpart B - Electronic Records</h4></a>
+	<p>
+		<table>
+			<thead>
+				<td>Requirement</td>
+				<td>Summary</td>
+				<td>Confluence</td>
+				<td>Add-on</td>
+				<td>Organization</td>
+			</thead>
+			<tr>
+				<td>§11.10(a)</td>
+				<td>Validation of systems</td>
+				<td></td>
+				<td></td>
+				<td>The organization is responsible for validating their Confluence installation and the add-on.</td>
+			</tr>
+			<tr>
+				<td>§11.10(b)</td>
+				<td>Record generation</td>
+				<td>Confluence has the ability to export documents in PDF or Word format.</td>
+				<td>The add-on's macros will appear in exported records.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>§11.10(c)</td>
+				<td>Protection of records</td>
+				<td>Confluence provides the ability to backup or transfer pages.</td>
+				<td>The add-on stores all data within Confluence pages.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>§11.10(d)</td>
+				<td>Limiting system access</td>
+				<td>Confluence provides the ability to manage users and groups, and to restrict privileges to particular users or content.</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>§11.10(e)</td>
+				<td>Audit trails</td>
+				<td>Confluence keeps all changes in a timestamped, secure <a href="https://confluence.atlassian.com/doc/audit-log-829076528.html">audit log</a>. When a page is modified, the old version of the page is preserved in the audit log.</td>
+				<td>The add-on links signatures to particular versions of a page, which will be reflected in the audit log. Signatures for older versions are always preserved and visible via the Document Control macro.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>§11.10(f)</td>
+				<td>Sequencing</td>
+				<td></td>
+				<td>The add-on ensures all steps happen in the proper order.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>§11.10(g)</td>
+				<td>Authority checks</td>
+				<td>See <a href="https://confluence.atlassian.com/confeval/other-atlassian-evaluator-resources/atlassian-cloud-security">Confluence Cloud data security policies</a>.</td>
+				<td>The add-on is only available to authenticated Confluence users, and can be configured to require additional authentication at time of signing.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>§11.10(h)</td>
+				<td>Validity</td>
+				<td></td>
+				<td></td>
+				<td>The organization should ensure this for all devices that use Confluence/the add-on.</td>
+			</tr>
+			<tr>
+				<td>§11.10(i)</td>
+				<td>Education and training</td>
+				<td></td>
+				<td></td>
+				<td>The organization should ensure that all users are properly educated, trained, and experienced.</td>
+			</tr>
+			<tr>
+				<td>§11.10(j)</td>
+				<td>Written policies</td>
+				<td></td>
+				<td></td>
+				<td>The organization should write and distribute policies related to electronic signatures.</td>
+			</tr>
+			<tr>
+				<td>§11.10(k)</td>
+				<td>Controls documentation</td>
+				<td></td>
+				<td></td>
+				<td>The organization is responsible for maintaining controls documentation.</td>
+			</tr>
+			<tr>
+				<td>§11.50(a)</td>
+				<td>Signature manifestations</td>
+				<td></td>
+				<td>The add-on ensures that signatures include the printed name of the signer and the data and time when the signature was executed. The add-on can be configured to require that signers include a signature meaning.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>§11.50(b)</td>
+				<td>Signature records</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</p>
+	<a name="fda-subpart-C"><h4>Subpart C - Electronic Signatures</h4></a>
+	<p>
+		<table>
+			<thead>
+				<td>Requirement</td>
+				<td>Summary</td>
+				<td>Confluence</td>
+				<td>Add-on</td>
+				<td>Organization</td>
+			</thead>
+			<tr>
+			</tr>
+		</table>
 	</p>
   </div>
 </div>
