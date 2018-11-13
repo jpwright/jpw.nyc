@@ -174,7 +174,7 @@ title: Document Control for Confluence Cloud
   		Fill out the form and click Submit to sign the page.
   	</p>
   	<p>
-  		If the <strong>Authentication</strong> setting is enabled, the user is required to enter their email and password, and this much the presently logged in Confluence user. If not, the email and password fields are highlighted in red to indicate a problem:
+  		If the <strong>Authentication</strong> setting is enabled, the user is required to enter their email and password, and this must match the presently logged in Confluence user. If not, the email and password fields are highlighted in red to indicate a problem:
   	</p>
   	<p>
   		<a href="/images/projects/dccc-add-signature-2.png" data-lightbox="dccc-add-signature-2" data-title="Signing a page.">
@@ -325,102 +325,109 @@ title: Document Control for Confluence Cloud
 		<table>
 			<thead>
 				<td>Requirement</td>
-				<td>Summary</td>
+				<td>Topic</td>
 				<td>Confluence</td>
 				<td>Add-on</td>
 				<td>Organization</td>
 			</thead>
 			<tr>
-				<td>§11.10(a)</td>
+				<td><a href="https://www.law.cornell.edu/cfr/text/21/11.10">§11.10(a)</a></td>
 				<td>Validation of systems</td>
 				<td></td>
 				<td></td>
 				<td>The organization is responsible for validating their Confluence installation and the add-on.</td>
 			</tr>
 			<tr>
-				<td>§11.10(b)</td>
+				<td><a href="https://www.law.cornell.edu/cfr/text/21/11.10">§11.10(b)</a></td>
 				<td>Record generation</td>
 				<td>Confluence has the ability to export documents in PDF or Word format.</td>
 				<td>The add-on's macros will appear in exported records.</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>§11.10(c)</td>
+				<td><a href="https://www.law.cornell.edu/cfr/text/21/11.10">§11.10(c)</a></td>
 				<td>Protection of records</td>
 				<td>Confluence provides the ability to backup or transfer pages.</td>
 				<td>The add-on stores all data within Confluence pages.</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>§11.10(d)</td>
+				<td><a href="https://www.law.cornell.edu/cfr/text/21/11.10">§11.10(d)</a></td>
 				<td>Limiting system access</td>
 				<td>Confluence provides the ability to manage users and groups, and to restrict privileges to particular users or content.</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>§11.10(e)</td>
+				<td><a href="https://www.law.cornell.edu/cfr/text/21/11.10">§11.10(e)</a></td>
 				<td>Audit trails</td>
 				<td>Confluence keeps all changes in a timestamped, secure <a href="https://confluence.atlassian.com/doc/audit-log-829076528.html">audit log</a>. When a page is modified, the old version of the page is preserved in the audit log.</td>
 				<td>The add-on links signatures to particular versions of a page, which will be reflected in the audit log. Signatures for older versions are always preserved and visible via the Document Control macro.</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>§11.10(f)</td>
+				<td><a href="https://www.law.cornell.edu/cfr/text/21/11.10">§11.10(f)</a></td>
 				<td>Sequencing</td>
 				<td></td>
 				<td>The add-on ensures all steps happen in the proper order.</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>§11.10(g)</td>
+				<td><a href="https://www.law.cornell.edu/cfr/text/21/11.10">§11.10(g)</a></td>
 				<td>Authority checks</td>
 				<td>See <a href="https://confluence.atlassian.com/confeval/other-atlassian-evaluator-resources/atlassian-cloud-security">Confluence Cloud data security policies</a>.</td>
 				<td>The add-on is only available to authenticated Confluence users, and can be configured to require additional authentication at time of signing.</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>§11.10(h)</td>
+				<td><a href="https://www.law.cornell.edu/cfr/text/21/11.10">§11.10(h)</a></td>
 				<td>Validity</td>
 				<td></td>
 				<td></td>
 				<td>The organization should ensure this for all devices that use Confluence/the add-on.</td>
 			</tr>
 			<tr>
-				<td>§11.10(i)</td>
+				<td><a href="https://www.law.cornell.edu/cfr/text/21/11.10">§11.10(i)</a></td>
 				<td>Education and training</td>
 				<td></td>
 				<td></td>
 				<td>The organization should ensure that all users are properly educated, trained, and experienced.</td>
 			</tr>
 			<tr>
-				<td>§11.10(j)</td>
+				<td><a href="https://www.law.cornell.edu/cfr/text/21/11.10">§11.10(j)</a></td>
 				<td>Written policies</td>
 				<td></td>
 				<td></td>
 				<td>The organization should write and distribute policies related to electronic signatures.</td>
 			</tr>
 			<tr>
-				<td>§11.10(k)</td>
+				<td><a href="https://www.law.cornell.edu/cfr/text/21/11.10">§11.10(k)</a></td>
 				<td>Controls documentation</td>
 				<td></td>
 				<td></td>
 				<td>The organization is responsible for maintaining controls documentation.</td>
 			</tr>
 			<tr>
-				<td>§11.50(a)</td>
+				<td><a href="https://www.law.cornell.edu/cfr/text/21/11.10">§11.50(a)</a></td>
 				<td>Signature manifestations</td>
 				<td></td>
 				<td>The add-on ensures that signatures include the printed name of the signer and the data and time when the signature was executed. The add-on can be configured to require that signers include a signature meaning.</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>§11.50(b)</td>
+				<td><a href="https://www.law.cornell.edu/cfr/text/21/11.10">§11.50(b)</a></td>
 				<td>Signature records</td>
 				<td></td>
-				<td></td>
+				<td>The add-on ensures signature manifestations are part of the electronic record by storing them within the Confluence page.</td>
 				<td></td>
 			</tr>
+      <tr>
+        <td><a href="https://www.law.cornell.edu/cfr/text/21/11.10">§11.70</a></td>
+        <td>Signature/record linking</td>
+        <td></td>
+        <td>The add-on does not allow signatures to be moved between records, and copied records do not retain electronic signatures. See <a href="#copy">Page copying</a> for more detail.</td>
+        <td></td>
+      </tr>
 		</table>
 	</p>
 	<a name="fda-subpart-C"><h4>Subpart C - Electronic Signatures</h4></a>
@@ -433,8 +440,69 @@ title: Document Control for Confluence Cloud
 				<td>Add-on</td>
 				<td>Organization</td>
 			</thead>
-			<tr>
-			</tr>
+      <tr>
+        <td><a href="https://www.law.cornell.edu/cfr/text/21/11.100">§11.100(a)</a></td>
+        <td>Uniqueness</td>
+        <td></td>
+        <td>The add-on ensures electronic signatures are unique to one Confluence account.</td>
+        <td>The organization should ensure that Confluence accounts are unique to one individual, and that Confluence accounts shall not be resued by, or reassigned to, anyone else.</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.law.cornell.edu/cfr/text/21/11.100">§11.100(b)</a></td>
+        <td>Identify verification</td>
+        <td></td>
+        <td></td>
+        <td>The organization should verify the identity of individuals before assigning a Confluence account.</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.law.cornell.edu/cfr/text/21/11.100">§11.100(c)</a></td>
+        <td>Agency certification</td>
+        <td></td>
+        <td></td>
+        <td>The organization should certify their use of electronic signatures in writing as per §11.100(c), and persons within the organization should provide any additional certification or testimony as required.</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.law.cornell.edu/cfr/text/21/11.200">§11.200(a)(1)</a></td>
+        <td>Identification components</td>
+        <td></td>
+        <td>The add-on can be configured to require users to provide their email address (i.e. identification code) and password before signing.</td>
+        <td>The organization should enable authentication for all signatures in the add-on's configuration.</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.law.cornell.edu/cfr/text/21/11.200">§11.200(a)(1)(i)</a></td>
+        <td>Single session</td>
+        <td></td>
+        <td>The add-on can be configured to require authentication for all signatures.</td>
+        <td>The organization should enable authentication for all signatures in the add-on's configuration.</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.law.cornell.edu/cfr/text/21/11.200">§11.200(a)(1)(ii)</a></td>
+        <td>Multiple sessions</td>
+        <td></td>
+        <td>The add-on can be configured to require authentication for all signatures.</td>
+        <td>The organization should enable authentication for all signatures in the add-on's configuration.</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.law.cornell.edu/cfr/text/21/11.200">§11.200(a)(2)</a></td>
+        <td>Genuine owners</td>
+        <td></td>
+        <td>The add-on can be configured to require authentication for all signatures.</td>
+        <td>The organization should ensure authentication information for Confluence accounts is only known, or can only be used, by the account's genuine owners.</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.law.cornell.edu/cfr/text/21/11.200">§11.200(a)(3)</a></td>
+        <td>Unauthorized attempts</td>
+        <td></td>
+        <td></td>
+        <td>The organization should take steps to ensure that use of an individual's Confluence account by anyone other than its genuine owner requires collaboration of two or more individuals.</td>
+      </tr>
+      <tr>
+        <td><a href="https://www.law.cornell.edu/cfr/text/21/11.300">§11.300</a></td>
+        <td>Controls for identification codes/passwords</td>
+        <td></td>
+        <td></td>
+        <td>The organization is responsible for maintaining controls for Confluence authentication information.</td>
+      </tr>
 		</table>
 	</p>
   </div>

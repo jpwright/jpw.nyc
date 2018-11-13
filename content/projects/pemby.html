@@ -1,0 +1,116 @@
+--- 
+title: pemby
+---
+
+<p>
+<span class="metadata">April 2018</span>
+</p>
+
+<p>
+<img src="/images/projects/pemby-header.png" />
+</p>
+
+<p>Air pollution is <a href="http://www.who.int/mediacentre/news/releases/2014/air-pollution/en/">the world’s largest single environmental health risk.</a></p>
+
+<p>I have always had an interest in technology to measure and communicate the impact of air pollution on our daily lives. In 2014 I had the great fortune to work as a hardware engineer for the <a href="http://cities.io/">ICRI Cities</a> group in London, where I primarily contributed to the <a href="https://www.london.gov.uk/what-we-do/business-and-economy/science-and-technology/smart-london/smart-london-case-studies/intel">London Living Labs project</a>, which deployed several hundred environmental monitoring stations across greater London. During that time I also participated in a PCH hackathon in Dublin, and worked on a team to design <a href="https://thebedlab.com/2014/11/05/2014/11/05/treo-pure-living/">Treo</a>, a concept for a wearable air quality monitor.</p>
+
+<p>Upon returning to Intel in Santa Clara, CA I worked on a team engaged in multiple environmental monitoring projects, including <a href="https://iq.intel.com/womens-health-wearable-developing-world/">COEL</a>, a bangle designed to help women in India and Bangladesh reduce carbon monoxide exposure.</p>
+
+<p>At MedicaSafe, our engineering lab has indoor AQ risks stemming from a small army of 3D printers, a CNC machine, a soldering workstation, and people eating lunch from Rafiqi’s. We purchased a Foobot and <a href="https://twitter.com/jsnwr/status/740569245952643072">hooked it up to our company Slack instance</a> to proactively alert about indoor pollution events.</p>
+
+<p>After becoming a somewhat regular Brooklyn-Manhattan bike commuter and inhaling my fair share of vehicular smog by the Manhattan Bridge on-ramp, I was interested in <a href="http://www.columbia.edu/cu/bike/">a Columbia University study</a> to measure air pollution exposure among NYC bike commuters.</p>
+
+<p>Unfortunately I wasn’t selected to participate in the study. Having thought about this idea for several years, and not wanting to buy an existing product to do this, I decided to just make my own personal air quality monitor instead.</p>
+
+<h4>Design</h4>
+
+<p><em>pemby</em> is a wearable air quality monitor intended for urban environments, optimized for cost and ease of use. It has sensors for oxidizing gases (NO2, O3), reducing gases (CO, VOCs), temperature, and relative humidity. A key innovation is the use of <a href="https://www.sgxsensortech.com/products-services/industrial-safety/metal-oxide-sensors/">metal oxide sensors from SGX Sensortech</a>, which enables a compact form factor and simple circuit design. It is the same technology used in <a href="http://www.takingspace.org/aircasting/airbeam/">AirBeam</a>. These sensors are simple, low-power, and low-cost. They can’t provide highly-accurate data, but they are suitable for “event detection” applications (like sensing sudden spikes -- for example, pulling up next to an idling truck) and unlike electrochemical gas sensors, they are usable in low-power wearable applications.</p>
+
+<p>pemby streams real time data over Bluetooth LE to a companion smartphone, which then processes that data and displays alerts related to pollutant exposure. The app is also used for periodic calibration of the device’s sensors. The device also contains an RGB LED which can be used to display an “at-a-glance” indication of recent exposure.</p>
+
+<p>pemby uses a rechargeable lithium-ion polymer battery, and only needs to be charged (via standard USB-C charger) about once a week.</p>
+
+<p>The design was done using <a href="https://www.altium.com/">Altium Designer 18</a> and manufactured by <a href="https://macrofab.com/">MacroFab</a>.</p>
+
+<h4>Key component selection</h4>
+
+<p>
+	<table>
+		<thead>
+			<td>Component</td>
+			<td>Function</td>
+			<td>Cost @ 10 units</td>
+			<td>Rationale</td>
+		</thead>
+		<tr>
+			<td>BL652</td>
+			<td>Bluetooth module based on nRF52832 SoC</td>
+			<td>$7.45</td>
+			<td>
+				<ul>
+					<li>Integrated microcontroller, RF frontend, antenna in low-cost package</li>
+					<li>Prior familiarity with nRF52832 and nRF5 SDK</li>
+					<li>FCC pre-certified</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>MICS-4514</td>
+			<td>MEMS AQ sensor (red/ox)</td>
+			<td>$13.32</td>
+			<td>
+				<ul>
+					<li>Dual sensor in single package</li>
+					<li>Very compact footprint</li>
+					<li>Single 5V supply</li>
+					<li>Minimal BOM requirements</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>BME680</td>
+			<td>Environmental sensor (tVOC, RH, temperature, pressure)</td>
+			<td>$10.78</td>
+			<td>
+				<ul>
+					<li>Low power consumption (~3.7uA @ 1Hz sampling, 0.15uA sleep mode)</li>
+					<li>Multiple sensors in single package</li>
+					<li>Very compact footprint</li>
+					<li>Well-known, quality manufacturer (Bosch's BMP280 barometric pressure is widely used)</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>MCP73812</td>
+			<td>Single-cell Li-Ion/Li-Polymer charge controller</td>
+			<td>$0.56</td>
+			<td>
+				<ul>
+					<li>500mA meets USB2 standard charging spec</li>
+					<li>Inexpensive</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>TPS61240</td>
+			<td>Step-up DC-DC converter</td>
+			<td>$1.54</td>
+			<td>
+				<ul>
+					<li>Required because AQ sensor needs a 5V supply but LiPo only provides 3.3-4.2V</li>
+					<li>Small external inductor</li>
+					<li>Optimized for Li-Po applications</li>
+					<li>Compact package</li>
+					<li>High efficiency and automatic power save mode</li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+</p>
+
+<h4>Schematic & Layout</h4>
+
+<div id="details"></div>
+
+<script src="/js/pdfobject.min.js"></script>
+<script>PDFObject.embed("/documents/pemby.pdf", "#details");</script>

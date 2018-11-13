@@ -7,6 +7,7 @@
 
 body {
   background: #fff;
+  position: absolute;
 }
 
 a {
@@ -28,7 +29,7 @@ a:hover {
   margin-top: 20px;
   margin-bottom: 50px;
   width: 670px;
-  max-width: 100%;
+  max-width: 80%;
   line-height: 1.5em;
 }
 
@@ -61,7 +62,6 @@ a:hover {
 }
 
 #main li {
-  font-size: 15px;
   margin-bottom: 25px;
 }
 
@@ -230,9 +230,28 @@ td:first-child {
 }
 
 thead td {
+  font-weight: bold;
   border-bottom: 2px solid #c6d5e3;
 }
 
 thead {
   background-color: rgba(198, 213, 227, 0.25);
+}
+
+.pdfobject-container {
+  height: 30rem;
+  border: 1rem solid rgba(0,0,0,.1);
+}
+
+@media (max-width: 375px) {
+
+  #sidebar li {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
 }

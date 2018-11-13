@@ -3,60 +3,25 @@ title: Projects
 ---
 
 <!-- These styles are only used on this page -->
-<style type="text/css">
-.project-row {
-    margin-bottom: 12px;
-}
-
-.project-col {
-    margin-right: 12px;
-    display: inline-block;
-    width: 206px;
-    position: relative;
-}
-
-.last-col {
-    margin-right: 0px;
-}
-
-.project-col img {
-    border: 1px solid #ddd;
-    padding: 2px;
-    position: relative;
-}
-
-.project-col .info {
-    background: rgb(0, 0, 0); /* fallback color */
-       background: rgba(0, 0, 0, 0.7);
-
-    width: 192px;
-    color: #ddd;
-    position: absolute;
-    bottom: 8px;
-    left: 3px;
-    display: inline-block;
-    line-height: 1.2em;
-    padding: 4px;
-}
-
-.project-col .info .title {
-    font-size: 1em;
-    text-align: center;
-    margin-bottom: 2px;
-}
-
-.project-col .info .desc {
-    font-size: 0.7em;
-    text-align: left;
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-</style>
+<link rel="stylesheet" href="/css/projects.css">
 
 <br />
 
-<div class="project-row">
-    <div class="project-col">
+<div class="flex-container">
+    <div class="flex-item project-box">
+        <a href="/projects/pemby/">        
+            <img src="/images/projects/pemby.png" />
+            <div class="info">
+                <div class="title">
+                    pemby
+                </div>
+                <div class="desc">
+                    Wearable air quality monitor for outdoor urban environments.
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="flex-item project-box">
         <a href="/projects/subway/">        
             <img src="/images/projects/brand-new-subway.png" />
             <div class="info">
@@ -69,7 +34,7 @@ title: Projects
             </div>
         </a>
     </div>
-    <div class="project-col">
+    <div class="flex-item project-box">
         <a href="/projects/asp-lfc/">        
             <img src="/images/projects/asp-lfc.png" />
             <div class="info">
@@ -82,7 +47,7 @@ title: Projects
             </div>
         </a>
     </div>
-    <div class="project-col">
+    <div class="flex-item project-box">
         <a href="/projects/anyone-home/">
             <img src="/images/projects/anyone-home.png" />
             <div class="info">
@@ -95,9 +60,7 @@ title: Projects
             </div>
         </a>
     </div>
-</div>
-<div class="project-row">
-    <div class="project-col last-col">
+    <div class="flex-item project-box">
         <a href="/projects/fpga-nes/">
             <img src="/images/projects/fpga-nes.png" />
             <div class="info">
@@ -110,7 +73,7 @@ title: Projects
             </div>
         </a>
     </div>
-    <div class="project-col">
+    <div class="flex-item project-box">
         <a href="/projects/facebook-squared/">        
             <img src="/images/projects/facebook-squared.png" />
             <div class="info">
@@ -123,7 +86,7 @@ title: Projects
             </div>
         </a>
     </div>
-    <div class="project-col">
+    <div class="flex-item project-box">
         <a href="/projects/heliowatcher/">
             <img src="/images/projects/heliowatcher.png" />
             <div class="info">
@@ -136,9 +99,7 @@ title: Projects
             </div>
         </a>
     </div>
-</div>
-<div class="project-row">
-    <div class="project-col last-col">
+    <div class="flex-item project-box">
         <a href="/projects/hack-the-popshop/">
             <img src="/images/projects/hack-the-popshop.png" />
             <div class="info">
@@ -151,7 +112,7 @@ title: Projects
             </div>
         </a>
     </div>
-    <div class="project-col">
+    <div class="flex-item project-box">
         <a href="/projects/debcite/">        
             <img src="/images/projects/debcite.png" />
             <div class="info">
@@ -164,8 +125,7 @@ title: Projects
             </div>
         </a>
     </div>
-
-    <div class="project-col">
+    <div class="flex-item project-box">
         <a href="/projects/nerf-sentry-gun/">        
             <img src="/images/projects/nerf-sentry-gun.png" />
             <div class="info">
