@@ -1,13 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-
   font-family: 'Open Sans', sans-serif;
 }
 
 body {
   background: #fff;
   position: absolute;
+  width: 100%;
 }
 
 a {
@@ -25,9 +25,7 @@ a:hover {
 
 #main {
   box-sizing: border-box;
-  margin-left: 10%;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  margin: 20px auto;
   width: 670px;
   max-width: 80%;
   line-height: 1.5em;
@@ -57,15 +55,15 @@ a:hover {
   font-size: 15px;
 }
 
-#main ul, #main ol {
+#content ul, #main ol {
   margin: 20px;
 }
 
-#main li {
+#content li {
   margin-bottom: 25px;
 }
 
-#main ul li {
+#content ul li {
   list-style-type: square;
 }
 
@@ -102,8 +100,6 @@ a:hover {
 }
 
 #logo {
-  position: absolute;
-  left: 10%;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -111,6 +107,7 @@ a:hover {
   font-size: 1.5em;
   color: #e6ebef;
   background: #384552;
+  line-height: 7px;
 }
 
 #jchar {
@@ -119,7 +116,7 @@ a:hover {
   margin-top:0.25em;
 }
 
-#jchar a {
+#logo a {
   color: #e6ebef;
   padding: 13px;
 }
@@ -243,7 +240,7 @@ thead {
   border: 1rem solid rgba(0,0,0,.1);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 62em) {
 
   #sidebar li {
     font-size: 22px;
@@ -252,6 +249,16 @@ thead {
 
   img {
     max-width: 100%;
+  }
+
+  #main {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #content {
+    padding: 0 10%;
   }
 
 }
