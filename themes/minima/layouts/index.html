@@ -1,0 +1,28 @@
+{{ define "main" }}
+	<main>
+		<div class="about-entry">
+			<div class="about-image" style="width: 20%">
+				<a href="/about" style="cursor: pointer;" class="float-shadow"><img style="object-fit:cover; border-radius:50%; border: 2px solid var(--ft);" src="/images/me.png" /></a>
+			</div>
+			<div class="about-text">
+				<h2 class="mt-8 mb-1">{{ .Site.Author.name }}</h2>
+				<p class="my-0">{{ .Site.Author.slogon }}</p>
+			</div>
+		</div>
+		<p class="my-3">
+			{{ .Site.Author.description | markdownify | safeHTML }}
+		</p>
+		{{ if eq .Paginator.PageNumber 1 }}
+		<h3 class="my-6">Recent Posts</h3>
+		{{ else }}
+		<h3 class="my-6">Older Posts</h3>
+		{{ end }}
+		<div>
+			{{ $paginator := .Paginate (where .Site.RegularPages "Kind" "page") }}
+			{{ range $paginator.Pages }}
+			{{ partial "list.html" . }}
+			{{ end }}
+			{{ partial "paginator.html" . }}
+		</div>
+	</main>
+{{ end }}

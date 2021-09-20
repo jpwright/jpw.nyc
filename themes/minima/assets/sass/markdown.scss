@@ -1,0 +1,68 @@
+.md blockquote {
+  background-color: rgba(148, 148, 149, 0.08) ;
+  padding: 1px 1rem;
+  border-left: 8px solid var(--pm);
+  font-style: italic;
+}
+
+.md table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  margin: 1em 0;
+  overflow: auto;
+}
+
+.md table thead {
+  background-color: var(--bd);
+}
+
+.md table th, 
+.md table td {
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--bd);
+}
+
+.md img {
+  max-width: 100%;
+}
+
+.md .katex {
+  overflow: auto hidden;
+}
+
+.md ul input[type="checkbox"] {
+  margin-right: 3px;
+}
+
+.md .ul-checkbox {
+  list-style: none;
+  padding-inline-start: 20px;
+}
+
+.md li {
+  line-height: 1.5;
+}
+
+.md ol,
+.md ul,
+.md img,
+.md blockquote,
+.md .highlight {
+  margin: .75rem 0;
+}
+
+.md hr {
+  margin: 1.5rem 0;
+}
+
+.md .footnotes {
+  word-break: break-all;
+  font-size: .9rem;
+}
+
+.md p sup {
+  margin-left: 4px;
+}
