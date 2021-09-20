@@ -7,7 +7,7 @@ _build:
   list: never
 ---
 
-Download a PDF version of this resume [here](resume.pdf).
+Download a PDF version of this resume [here](/pdf/resume.pdf).
 
 ### Work experience
 
