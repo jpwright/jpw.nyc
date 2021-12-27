@@ -23,6 +23,33 @@ div.about-text {
 	padding-left: 1em;
 }
 
+div.work-image {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  max-width: 25%;
+}
+
+div.work-image img {
+  object-fit: cover;
+  border-radius: 10%;
+  border: 2px solid var(--ft);
+}
+
+div.work-text {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  padding-left: 1em;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+div.work-text strong {
+  font-size: 1.2em;
+  display: block;
+  margin-bottom: 0.8em;
+}
 
 // Default options
 $defaultDuration: .3s;

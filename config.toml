@@ -5,6 +5,7 @@ copyright = ""
 paginate = 5
 googleAnalytics = ""
 disqusShortname = "jpw.nyc"
+enableRobotsTXT = true
 
 # theme is the name of the hugo theme you choose,
 # `hugo-theme-minima` is put here only for debuging,
@@ -16,7 +17,7 @@ theme = "minima"
 [author]
 name = "Jason Wright"
 slogon = "Electrical engineer & health technologist in New York City"
-description = "I'm an electrical engineer interested in biosensing, healthcare, medical devices, and low-power wireless systems. I work in the Bioelectronics and Biosensing Lab at the Feinstein Institutes for Medical Research, designing implantable wireless devices for neuromodulation research."
+description = "I'm an electrical and embedded systems engineer interested in biosensing, medical devices, and low-power wireless systems. I am currently at Synchron, helping to develop the future of brain-computer interfaces using minimally invasive neuro-endovascular recording."
 
 
 [params]
@@ -78,9 +79,13 @@ name = "About"
 url = "/about"
 weight = 2
 [[menu.main]]
+name = "Works"
+url = "/works"
+weight = 3
+[[menu.main]]
 name = "Categories"
 url = "/categories"
-weight = 3
+weight = 4
 
 
 # You can classify your posts by setting taxanomies in the front matter like
@@ -103,3 +108,32 @@ noClasses = false
 [markup.goldmark.renderer]
 unsafe= true
   
+[deployment]
+
+[[deployment.targets]]
+# An arbitrary name for this target.
+name = "google-cloud"
+# The Go Cloud Development Kit URL to deploy to. Examples:
+# GCS; see https://gocloud.dev/howto/blob/#gcs
+URL = "gs://jpw.nyc"
+
+[[deployment.matchers]]
+# Cache static assets for 1 year.
+pattern = "^.+\\.(js|css|svg|ttf)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(png|jpg)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = false
+
+[[deployment.matchers]]
+# Set custom content type for /sitemap.xml
+pattern = "^sitemap\\.xml$"
+contentType = "application/xml"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(html|xml|json)$"
+gzip = true

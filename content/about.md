@@ -13,16 +13,33 @@ Download a PDF version of this resume [here](/pdf/resume.pdf).
 
 <div class="about-entry">
 	<div class="about-image">
+		<img src="/images/synchron.png" alt="Synchron logo"/>
+	</div>
+	<div class="about-text">
+		<p>
+			<strong>Synchron</strong>
+			<br />
+			Senior Embedded Systems Engineer &middot; Brooklyn, NY &middot; November 2021&#8211;present
+		<ul>
+			<li>Developing robust and reliable motor neuroprosthetic systems utilizing the Stentrode, a minimally-invasive endovascular recording implant.</li>
+		</ul>
+		</p>
+	</div>
+</div>
+
+<div class="about-entry">
+	<div class="about-image">
 		<img src="/images/northwell.png" alt="Northwell Health logo"/>
 	</div>
 	<div class="about-text">
 		<p>
 			<strong>Feinstein Institutes for Medical Research / Northwell Health</strong>
 			<br />
-			Electrical Engineer &middot; Manhasset, NY &middot; March 2019&#8211;present
+			Electrical Engineer &middot; Manhasset, NY &middot; March 2019&#8211;October 2021
 		<ul>
 			<li>Within the Institute for Bioelectronic Medicine, I developed the electronics and software for the first wireless bidirectional neuromodulation system for chronic implantation in mice.</li>
 			<li>Designed a novel multi-channel system for performing <em>in vivo</em> fast-scan cyclic voltammetry experiments.</li>
+			<li>Technical contributor to research experiments and clinical trials.</li>
 		</ul>
 		</p>
 	</div>
@@ -97,7 +114,6 @@ Download a PDF version of this resume [here](/pdf/resume.pdf).
 * algorithms / signal processing
 * data analysis / scientific computing
   * MATLAB / GNU Octave
-* web development
 * regulatory compliance
   * 21 CFR 820
   * ISO 13485
@@ -107,6 +123,7 @@ Download a PDF version of this resume [here](/pdf/resume.pdf).
 
 ### Selected publications and patents
 
+* J. Chang, A. Coggins, M. Saul, A. Paget-Blanc, M. Straka, __J. Wright__, T.  Datta-Chaudhuri, S. Zanos, and B. Volpe, "Transcutaneous Auricular Vagus Nerve Stimulation (tAVNS) Delivered During Upper Limb Interactive Robotic Training Demonstrates Novel Antagonist Control for Reaching Movements Following Stroke," Frontiers in Neuroscience, 25-Nov-2021, http://dx.doi.org/10.3389/fnins.2021.767302
 * __J. Wright__ et al., “A Fully Implantable Wireless Bidirectional Neuromodulation System for Mice.” Cold Spring Harbor Laboratory, 02-Jun-2021 [Online]. Available: http://dx.doi.org/10.1101/2021.06.02.446797
 * T. Sun, __J. Wright__, and T. Datta-Chaudhuri, “Ultrasound powered piezoelectric neurostimulation devices: a commentary,” Bioelectron Med, vol. 6, no. 1, Aug. 2020, http://dx.doi.org/10.1186/s42234-020-00052-6
 * __J. Wright__, J. Wong, Y.-C. Chang, U. Ahmed, S. Zanos, and T. Datta-Chaudhuri, “A low-power implantable neurostimulator for small rodents with functional validation,” in 2019 IEEE Biomedical Circuits and Systems Conference (BioCAS), 2019, http://dx.doi.org/10.1109/BIOCAS.2019.8919215

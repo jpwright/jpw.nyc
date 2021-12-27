@@ -4,6 +4,7 @@ title: "Writing a custom radio protocol for nRF5x"
 date: "2021-09-20T10:52:59+08:00"
 toc: true
 categories: ["nrf5x", "firmware", "wireless"]
+draft: true
 ---
 
 The nRF5x family of wireless MCUs from Nordic Semiconductor supports a wide array of commonly used protocols - Bluetooth LE, ANT, ESB, for example - but for certain applications a custom protocol is desirable to further optimize power consumption, throughput, or latency beyond existing offerings.
@@ -21,7 +22,7 @@ As for the nRF5 SDK examples, you need the following tools installed:
 
 I will test using the nRF52 DK (PCA10056), but any development board should do.
 
-> If you are using a board with no external RTC crystal, be sure to edit
+> If you are using a board with no external RTC crystal, be sure to edit __sdk_config.h__ to properly set the LFCLK source to the internal RC oscillator.
 
 > To fully test the protocol you'll need two boards - one transmitter and one receiver.
 
@@ -29,9 +30,29 @@ The full code for this example is available as a Git repo here.
 
 ## Initializing the RADIO peripheral
 
+### PREFIX
+
+### BASE
+
+### TXADDRESS/RXADDRESSES
+
+### PCNF
+
+### CRC
+
+### TXPOWER
+
+### MODE
+
+### FREQUENCY
+
 ## Putting SHORTS on
 
+READY, START, END, DISABLE, etc
+
 ## Setting up the RTC
+
+## Setting the packet data
 
 ## Comparing CHIRP to other protocols
 
