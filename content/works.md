@@ -9,7 +9,7 @@ _build:
 
 <div class="about-entry">
 	<div class="work-image">
-		<a href="/nex"><img src="/images/nex.png" alt="Synchron logo"/></a>
+		<a href="/nex"><img src="/images/nex.png" alt="NEX photo"/></a>
 	</div>
 	<div class="work-text">
 		<p>
@@ -20,7 +20,7 @@ _build:
 </div>
 <div class="about-entry">
 	<div class="work-image">
-		<a href="/transit"><img src="/images/transit.png" alt="Synchron logo"/></a>
+		<a href="/transit"><img src="/images/transit.png" alt="Enmodal screenshot"/></a>
 	</div>
 	<div class="work-text">
 		<p>
@@ -32,7 +32,7 @@ _build:
 
 <div class="about-entry">
 	<div class="work-image">
-		<a href="/air-quality"><img src="/images/pemby.png" alt="Synchron logo"/></a>
+		<a href="/air-quality"><img src="/images/pemby.png" alt="Pemby photo"/></a>
 	</div>
 	<div class="work-text">
 		<p>
@@ -44,7 +44,7 @@ _build:
 
 <div class="about-entry">
 	<div class="work-image">
-		<a href="/study-randomizer"><img src="/images/study-randomizer.png" alt="Synchron logo"/></a>
+		<a href="https://www.studyrandomizer.com/"><img src="/images/study-randomizer.png" alt="Study Randomizer screenshot"/></a>
 	</div>
 	<div class="work-text">
 		<p>
@@ -56,7 +56,7 @@ _build:
 
 <div class="about-entry">
 	<div class="work-image">
-		<a href="/document-control"><img src="/images/document-control.png" alt="Synchron logo"/></a>
+		<a href="https://www.phaselockedsoftware.com/en/document-control/"><img src="/images/document-control.png" alt="Document Control screenshot"/></a>
 	</div>
 	<div class="work-text">
 		<p>
@@ -68,7 +68,7 @@ _build:
 
 <div class="about-entry">
 	<div class="work-image">
-		<a href="/transcriptions"><img src="/images/jazz-piano.png" alt="Synchron logo"/></a>
+		<a href="/transcriptions"><img src="/images/jazz-piano.png" alt="Sheet music example"/></a>
 	</div>
 	<div class="work-text">
 		<p>

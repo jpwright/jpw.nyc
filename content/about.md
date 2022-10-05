@@ -123,8 +123,9 @@ Download a PDF version of this resume [here](/pdf/resume.pdf).
 
 ### Selected publications and patents
 
+* __J. Wright__ et al., “A fully implantable wireless bidirectional neuromodulation system for mice,” Biosensors and Bioelectronics, vol. 200. Elsevier BV, p. 113886, Mar. 2022, http://dx.doi.org/10.1016/j.bios.2021.113886
+* K. Noruzi, P. Swami, L. Frejo, __J. Wright__, J. Wong, D. Grande, and T. Datta-Chaudhuri, “Effect of uniform capacitively coupled electric fields on matrix metabolism of osteoarthritic cartilage,” Bioelectronic Medicine, vol. 8, no. 1. Springer Science and Business Media LLC, Sep. 14, 2022, ttp://dx.doi.org/10.1186/s42234-022-00096-w
 * J. Chang, A. Coggins, M. Saul, A. Paget-Blanc, M. Straka, __J. Wright__, T.  Datta-Chaudhuri, S. Zanos, and B. Volpe, "Transcutaneous Auricular Vagus Nerve Stimulation (tAVNS) Delivered During Upper Limb Interactive Robotic Training Demonstrates Novel Antagonist Control for Reaching Movements Following Stroke," Frontiers in Neuroscience, 25-Nov-2021, http://dx.doi.org/10.3389/fnins.2021.767302
-* __J. Wright__ et al., “A Fully Implantable Wireless Bidirectional Neuromodulation System for Mice.” Cold Spring Harbor Laboratory, 02-Jun-2021 [Online]. Available: http://dx.doi.org/10.1101/2021.06.02.446797
 * T. Sun, __J. Wright__, and T. Datta-Chaudhuri, “Ultrasound powered piezoelectric neurostimulation devices: a commentary,” Bioelectron Med, vol. 6, no. 1, Aug. 2020, http://dx.doi.org/10.1186/s42234-020-00052-6
 * __J. Wright__, J. Wong, Y.-C. Chang, U. Ahmed, S. Zanos, and T. Datta-Chaudhuri, “A low-power implantable neurostimulator for small rodents with functional validation,” in 2019 IEEE Biomedical Circuits and Systems Conference (BioCAS), 2019, http://dx.doi.org/10.1109/BIOCAS.2019.8919215
 * M. Ervin, A. Nawrozie, __J. Wright__, and M. Dell, 2020. Method, system and apparatus for guiding and tracking medication usage. [US20180240541A1](https://patents.google.com/patent/US20180240541A1/).
